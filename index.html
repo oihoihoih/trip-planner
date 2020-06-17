@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang=es dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/elegant-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+    <title>Trip planner</title>
+  </head>
+
+
+
+  <body>
+
+<!-- INTRO
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<header id="intro" class="col-lg-6 mx-auto d-flex align-items-center">
+  <div class="wrapper">
+    <div id="intro-title">
+      <h1>Barcelona planner</h1>
+    </div>
+    <div id="intro-text">
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta quam non orci malesuada condimentum. Duis condimentum felis posuere urna porttitor, vel dignissim mauris varius. Nulla non velit metus. Aenean.</h2>
+    </div>
+  </div>
+</header>
+
+<!-- botón/texto para activar el formulario.
+Cambiar forma del cursor para que se entienda que es un botón.
+¿Añadir un icono? -->
+<footer class="navigation-area d-flex flex-column justify-content-end pb-3">
+    <h6 onClick="openPopupForm()">¡empecemos!</h6>
+</footer>
+
+
+<!--Formulario de inicio -->
+<div id="welcome-form" class="welc-form">
+    <!--Contenedor del formulario-->
+    <div id="form-popup" class="col-lg-10 card-basic active">
+        <!--Botón cerrar formulario-->
+        <button type="button" id="close-form" class="close" onClick="closeForm()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <div class="mx-auto row d-flex flex-column">
+            <div class="card-info">
+                <p class="text-center">Antes de empezar, necesitamos saber algunos datos sobre tu viaje.</p>
+                <!--aquí habría que meter alguna nota de privacidad?-->
+            </div>
+
+            <form id="initial-form"  class="col-lg-6 mx-auto" action="">
+                <!--Llegada y salida-->
+                <div class="row">
+                    <!--Llegada-->
+                    <div class="col-lg-6  mt-3 mt-lg-5">
+                        <label for="arrival"> Llegada </label><br>
+                        <input type="date" id="arrival" name="arrival" min="" class="w-100">
+                    </div>
+
+                    <!--Salida-->
+                    <div class="col-lg-6  mt-3 mt-lg-5">
+                        <label for="departure"> Salida </label><br>
+                        <input type="date" id="departure" name="departure" max="" class="w-100"><br>
+                    </div>
+                </div>
+
+                <!--Número de personas-->
+                <div class="row">
+                    <!-- Adultos. Aquí quiero poner selector tipo AirBnb-->
+                    <div class="col-lg-6  mt-3 mt-lg-5">
+                        <label for="adults"> Adultos </label><br>
+                        <input type="number" id="adults" name="adults" min="1" max="16" value="1" class="w-100">
+                    </div>
+                    <!-- Niños-->
+                    <div class="col-lg-6 mt-3 mt-lg-5">
+                        <label for="children"> Niños </label><br>
+                        <input type="number" id="children" name="children" min="0" max="5" value="0" class="w-100"><br>
+                    </div>
+                </div>
+
+                <!--Alojamiento.
+                Aquí quiero poner búsqueda por mapa y dirección. A definir-->
+                <div class=" mt-3 mt-lg-5">
+                    <label for="accommodation"> Alojamiento </label><br>
+                    <input type="alojamiento" id="accommodation" name="accommodation" class="w-100"><br>
+                </div>
+                <div class="form-login">
+                    <p onClick="openLogin()">Crear usuario</p> <p> / </p><p>entrar</p>
+                </div>
+
+                <!--Botón-->
+                <input type="submit" value="enviar" class="w-50 mt-5">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!--Formulario de registro personal-->
+<div id="login-form" class="login-form">
+    <!--Contenedor del formulario-->
+    <div id="login-popup" class="col-lg-10 card-basic active">
+            <!-- contenedor con ilustración -->
+            <div class="off-login col-lg-6 d-none d-lg-flex flex-column">
+                <div class="card-title-light">
+                    <h3>¡Hola!</h3>
+                </div>
+
+                <div class="card-dark-image col-8 mx-auto">
+                    <img src="img/noun_barcelona_1074996.svg" alt="ilustración de Barcelona">
+                </div>
+            </div>
+
+            <!-- contenedor para logearse -->
+            <div class="on-login col-lg-6">
+                <div class="card-title-dark">
+                    <h3>Entrar</h3>
+                </div>
+
+                <form id="login-screen"  class="col-lg-10 mx-auto pt-3" action="">
+                    <!--Usuario-->
+                    <div class=" mt-3 mt-lg-5">
+                        <label for="user"> Usuario </label><br>
+                        <input type="email" id="user" name="user" class="w-100" placeholder="usuario@mimail.com"><br>
+                    </div>
+
+                    <!--Contraseña-->
+                    <div class=" mt-3 mt-lg-5">
+                        <label for="user"> Contraseña </label><br>
+                        <input type="password" id="user-password" name="user-password" class="w-100" placeholder="">icono ojo dentro del input
+                        <!--¿Cómo meto el ojito aquí?-->
+                    </div>
+
+                    <!-- Olvidaste tu contraseña?-->
+                    <div class="form-login">
+                        <p>¿Olvidaste tu contraseña?</p>
+                    </div>
+
+                    <!--Botón-->
+                    <div class="center-button">
+                        <input type="submit" value="enviar" class="w-50 mt-5">
+                    </div>
+                </form>
+            </div>
+    </div>
+</div>
+
+
+    <script src="js/main.js"></script>
+    <script src = "js/jquery-3.5.1.slim.min.js"></script>
+    <script src = "js/popper.min.js"></script>
+    <script src = "js/bootstrap.min.js"></script>
+  </body>
+
+</html>

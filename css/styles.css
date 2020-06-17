@@ -1,0 +1,263 @@
+body{
+  background-color: #9BCAC0;
+  font-family: "Poppins", sans-serif;
+  color: #064469;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+
+h6 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+p {
+  font-size: 1rem;
+
+}
+
+
+/* ELEMENTOS NAVEGACIÓN
+*************************************************************************************************************************************************************************************************************************************************/
+
+
+.navigation-area, .navigation-close {
+  text-align: center;
+  height: 10vh;
+}
+
+.close {
+    font-weight: 100;
+    font-size: 5rem;
+    color: #064469;
+    text-shadow: none;
+    opacity: 1;
+    position: relative;
+    top: -30px;
+}
+
+
+/* INTRO
+*************************************************************************************************************************************************************************************************************************************************/
+
+#intro {
+  height: 90vh;
+}
+
+#intro-text {
+  margin-top: 5rem;
+}
+
+
+
+/* WELCOME FORM
+*************************************************************************************************************************************************************************************************************************************************/
+
+.welc-form {
+    background: rgba(155, 202, 192, 1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.7);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.welc-form.active {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.card-basic {
+  background-color: #F1B2A9;
+  border-radius: 3rem;
+  padding: 50px;
+  transition: all 0.3s ease;
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+input {
+    background: transparent;
+    border: 2px solid #064469;
+    border-radius: 1rem;
+    height: 4rem;
+    padding: 1rem;
+    color: #064469;
+}
+input[type=submit]{
+    background-color: #064469;
+    color: #F1B2A9;
+    font-weight: 700;
+}
+
+label {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+}
+
+.form-login {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+/* LOGIN FORM
+*************************************************************************************************************************************************************************************************************************************************/
+/*login-form (esto es el contenedor) igualar al máximo con welcome form*/
+.login-form {
+    background: rgba(155, 202, 192, 1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.7);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.login-form.active{
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.off-login {
+    background-color: #064469;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 3rem 0 0 3rem;
+}
+
+.on-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.image-container{
+    position: absolute;
+    left: 0;
+}
+
+.card-title-light, .card-title-dark{
+    text-align: center;
+    margin-top: 5rem;
+}
+.card-title-light {
+    color: #f1b2a9;
+}
+
+.card-title-dark {
+    color: #064469;
+}
+
+.card-dark-image {
+    padding-top: 5rem;
+}
+
+/* Animaciones
+********+********+********+********+********+********+********+********+****************
+*/
+
+.card-basic.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+/* RESPONSIVE
+*************************************************************************************************************************************************************************************************************************************************/
+
+
+
+@media only screen and (max-width: 575.98px) {
+
+/* WELLCOME FORM
+*******************************************************************************************/
+.card-basic {
+    height: 100vh;
+    border-radius: 0;
+}
+
+}
+
+/* Small devices (phones)*/
+@media (max-width: 575px){
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+/* WELLCOME FORM
+*******************************************************************************************/
+.card-basic {
+    height: 100vh;
+    border-radius: 0;
+}
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+/* WELLCOME FORM
+*******************************************************************************************/
+.card-basic {
+    height: 100vh;
+    border-radius: 0;
+}
+
+}

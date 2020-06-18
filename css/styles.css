@@ -38,7 +38,7 @@ p {
 }
 
 .highlight {
-    font-weight: 700;
+    font-weight: 600;
     color: #dd5f49;
 }
 
@@ -175,6 +175,29 @@ label {
     opacity: 1;
 }
 
+.register-form {
+    background: rgba(155, 202, 192, 1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.7);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.register-form.active{
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+}
+
 .off-login {
     background-color: #064469;
     position: absolute;
@@ -184,10 +207,26 @@ label {
     border-radius: 3rem 0 0 3rem;
 }
 
+.off-register {
+    background-color: #064469;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-radius: 0 3rem 3rem 0;
+}
+
 .on-login {
     position: absolute;
     top: 0;
     right: 0;
+    height: 100%;
+}
+
+.on-register {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
 }
 

@@ -92,7 +92,7 @@ Cambiar forma del cursor para que se entienda que es un botón.
                     <input type="alojamiento" id="accommodation" name="accommodation" class="w-100"><br>
                 </div>
                 <div class="form-login">
-                    <p onClick="openLogin()">Crear usuario</p> <p> / </p><p>entrar</p>
+                    <p onClick="openRegister()">Crear usuario</p> <p> / </p><p onClick="openLogin()">entrar</p>
                 </div>
 
                 <!--Botón-->
@@ -103,7 +103,7 @@ Cambiar forma del cursor para que se entienda que es un botón.
 </div>
 
 
-<!--Formulario de registro personal-->
+<!--Formulario de login personal-->
 <div id="login-form" class="login-form">
     <!--Contenedor del formulario-->
     <div id="login-popup" class="col-lg-10 card-basic active">
@@ -150,12 +150,69 @@ Cambiar forma del cursor para que se entienda que es un botón.
                 </form>
 
                 <div class="form-register">
-                    <p onClick="openRegister()">¿No tienes cuenta?</p> <p class="highlight">Crear cuenta</p>
+                    <p onClick="openRegister()">¿No tienes cuenta?</p> <p class="highlight" onClick="openRegister()">Crear cuenta</p>
                 </div>
             </div>
     </div>
 </div>
 
+
+<!--Formulario de registro personal-->
+<div id="register-form" class="register-form">
+    <!--Contenedor del formulario-->
+    <div id="login-popup" class="col-lg-10 card-basic active">
+            <!-- contenedor para registrarse -->
+            <div class="on-register col-lg-6">
+                <div class="card-title-dark">
+                    <h3>Registro</h3>
+                </div>
+
+                <form id="register-screen"  class="col-lg-10 mx-auto pt-3" action="">
+                    <!--Usuario-->
+                    <div class="mt-3 mt-lg-3">
+                        <!--Nombre usuario-->
+                        <label for="name"> Nombre de usuario </label><br>
+                        <input type="text" id="name" name="name" class="w-100" placeholder="nombre"><br>
+
+                    </div>
+
+                    <!--Mail-->
+                    <div class="mt-3 mt-lg-3">
+                        <label for="email"> Email </label><br>
+                        <input type="email" id="email" name="email" class="w-100" placeholder="">
+                        <!--¿Cómo meto el ojito aquí?-->
+                    </div>
+                    <!--Mail-->
+                    <div class="mt-3 mt-lg-3">
+                        <label for="r-password"> Contraseña </label><br>
+                        <input type="password" id="r-password" name="r-password" class="w-100" placeholder="">
+                        <!--¿Cómo meto el ojito aquí?-->
+                    </div>
+
+                    <!--Botón-->
+                    <div class="center-button">
+                        <input type="submit" value="enviar" class="w-50 mt-5">
+                    </div>
+                </form>
+
+                <div class="form-register">
+                    <p>¿Ya estás registrado?</p> <p class="highlight" onClick="openLogin()">Entrar</p>
+                </div>
+            </div>
+
+            <!-- contenedor con ilustración -->
+            <div class="off-register col-lg-6 d-none d-lg-flex flex-column">
+                <div class="card-title-light">
+                    <h3>¡Hola!</h3>
+                </div>
+
+                <div class="card-dark-image col-8 mx-auto">
+                    <img src="img/noun_barcelona_1074996.svg" alt="ilustración de Barcelona">
+                </div>
+            </div>
+
+    </div>
+</div>
 
     <script src="js/main.js"></script>
     <script src = "js/jquery-3.5.1.slim.min.js"></script>

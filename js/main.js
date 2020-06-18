@@ -16,3 +16,9 @@ function openLogin() {
 
     openLoginForm.classList.add('active');
 }
+
+function openRegister() {
+    let openRegisterForm = document.getElementById("register-form");
+
+    openRegisterForm.classList.add('active');
+}

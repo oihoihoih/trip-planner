@@ -1,0 +1,80 @@
+/*colores*/
+
+$light-color: #ECF0F1;
+$dark-color: #1F2933;
+$primary-color: #4452CF;
+$primary-color-complement: #F7B23B;
+$contrast-color: #E74C3C;
+
+/* tipografía */
+// Buscar una tipo complementaria para textos en cuerpo pequeño??
+/* Posibilidades: Archivo, open sans, raleway (googlefonts) */
+
+$sans-serif: "poppins", sans-serif;
+
+/* weights */
+// Al finlal, eliminar los que no use
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500; /*usado*/
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900; /*usado*/
+
+
+
+/* reglas generales */
+
+body {
+  background-color: $light-color;
+  width: 100%;
+  font-family: $sans-serif;
+  font-weight: $regular;
+  color: $dark-color;
+}
+
+h1, h2 {
+  font-family: $sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 {
+  font-weight: $black;
+  color: $primary-color;
+  font-size: 6vw;
+  line-height: 1em;
+  //cambiar el font size con lo que me enseñó Albert
+}
+
+h2 {
+  color: $light-color;
+  font-weight: $medium;
+  font-size: 2rem;
+}
+
+h3 {
+  color: $primary-color;
+  font-size: 2rem;
+  font-weight: $bold;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+h6 {
+  font-size: 0.9rem;
+  color: $dark-color;
+  text-transform: uppercase;
+  line-height: 1.8em;
+  font-weight: $regular;
+  letter-spacing: 1px;
+}
+
+/*Utilizo esta clase únicamente para textos tipo leyenda. Ej. "Scroll"*/
+small.light {
+  text-transform: uppercase;
+  color: $light-color;
+  letter-spacing: 3px;
+}

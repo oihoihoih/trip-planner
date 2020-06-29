@@ -1,0 +1,50 @@
+@import "components/globals";
+@import "components/icons";
+@import "components/forms";
+@import "components/buttons";
+
+
+.content-intro {
+  padding: 2% 6%;
+}
+
+/*
+******************************************************************************************
+INTRO ************************************************************************************
+******************************************************************************************
+*/
+
+#intro {
+    height: 85vh;
+}
+
+#main-title {
+    margin: 0 30%;
+}
+
+#intro-illustration {
+  background-image: url('../imgs/cloud-transition.svg');
+  background-size: cover;
+  height: auto;
+  background-repeat: no-repeat;
+  z-index: -9999;
+}
+
+.nav-icon {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.content-intro-text {
+  background-color: $primary-color;
+  height: 100vh;
+  padding: 0 30%;
+}
+
+
+
+/*
+******************************************************************************************
+PREGUNTAS ********************************************************************************
+******************************************************************************************
+*/

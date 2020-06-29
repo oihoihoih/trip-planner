@@ -1,0 +1,20 @@
+
+.icon-mouse:before { content: '\e800'; } /* '' */
+.icon-cancel:before { content: '\e801'; } /* '' */
+.icon-down-open-big:before { content: '\e802'; } /* '' */
+.icon-right-open-big:before { content: '\e803'; } /* '' */
+.icon-left-open-big:before { content: '\e804'; } /* '' */
+.icon-arrow-left-conf:before { content: '\e805'; } /* '' */
+.icon-arrow-right-conf:before { content: '\e806'; } /* '' */
+.icon-close-cross:before { content: '\e807'; } /* '' */
+.icon-flight:before { content: '\e808'; } /* '' */
+.icon-location:before { content: '\e809'; } /* '' */
+.icon-help-circled:before { content: '\e80a'; } /* '' */
+.icon-bus:before { content: '\e80b'; } /* '' */
+.icon-fast:before { content: '\e80c'; } /* '' */
+.icon-money:before { content: '\e80d'; } /* '' */
+.icon-cab:before { content: '\f1b9'; } /* '' */
+.icon-taxi:before { content: '\f1ba'; } /* '' */
+.icon-ship:before { content: '\f21a'; } /* '' */
+.icon-train:before { content: '\f238'; } /* '' */
+.icon-subway:before { content: '\f239'; } /* '' */

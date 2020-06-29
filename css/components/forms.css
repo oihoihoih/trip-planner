@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/*colores*/
+/* tipografía */
+/* Posibilidades: Archivo, open sans, raleway (googlefonts) */
+/* weights */
+/*usado*/
+/*usado*/
+/* reglas generales */
+body {
+  background-color: #ECF0F1;
+  width: 100%;
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  color: #1F2933; }
+
+h1, h2 {
+  font-family: "poppins", sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+h1 {
+  font-weight: 900;
+  color: #4452CF;
+  font-size: 6vw;
+  line-height: 1em; }
+
+h2 {
+  color: #ECF0F1;
+  font-weight: 500;
+  font-size: 2rem; }
+
+h3 {
+  color: #4452CF;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.5em; }
+
+h6 {
+  font-size: 0.9rem;
+  color: #1F2933;
+  text-transform: uppercase;
+  line-height: 1.8em;
+  font-weight: 400;
+  letter-spacing: 1px; }
+
+/*Utilizo esta clase únicamente para textos tipo leyenda. Ej. "Scroll"*/
+small.light {
+  text-transform: uppercase;
+  color: #ECF0F1;
+  letter-spacing: 3px; }
+
+/*
+************************************************************************************
+FORMULARIOS
+************************************************************************************
+*/
+.blue {
+  background-color: #4452CF;
+  padding: 7%;
+  height: 100vh; }
+
+.card {
+  width: 90vw;
+  height: 90vh;
+  padding: 15px 25px;
+  background-color: #ECF0F1;
+  border-radius: 4em; }
+
+.form-info {
+  color: #4452CF;
+  padding-top: 1.5rem;
+  text-align: center; }
+
+.form-open {
+  width: 50%; }
+
+.open {
+  width: 100%;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #4452CF;
+  background-color: transparent; }
+
+.open-label {
+  color: #4452CF;
+  text-transform: uppercase; }
+
+.optional {
+  margin-right: 25%; }
+  .optional a {
+    color: #E74C3C;
+    font-weight: 600; }
+
+/*
+FORMULARIO CON OPCIONES PARA ELEGIR
+*/
+/*
+BREADCRUMBS
+*/
+.bread-line {
+  border-bottom: 1px solid #1F2933;
+  width: 30px;
+  margin: 0 5px 10px 8px; }
+
+/*
+************************************************************************************
+PANTALLAS AUXILIARES
+************************************************************************************
+*/
+.auxiliar-text-container {
+  padding: 0 25%; }
+
+/*# sourceMappingURL=forms.css.map */

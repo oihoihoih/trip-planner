@@ -1,220 +1,366 @@
 <!DOCTYPE html>
 <html lang=es dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie-edge">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/elegant-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/fonts/elegant-icons.css">-->
+    <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 
+
     <title>Trip planner</title>
-  </head>
+</head>
 
 
 
-  <body>
+<body>
 
 <!-- INTRO
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-<header id="intro" class="col-lg-6 mx-auto d-flex align-items-center">
-  <div class="wrapper">
-    <div id="intro-title">
-      <h1>Barcelona planner</h1>
-    </div>
-    <div id="intro-text">
-      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta quam non orci malesuada condimentum. Duis condimentum felis posuere urna porttitor, vel dignissim mauris varius. Nulla non velit metus. Aenean.</h2>
-    </div>
-  </div>
-</header>
-
-<!-- botón/texto para activar el formulario.
-Cambiar forma del cursor para que se entienda que es un botón.
-¿Añadir un icono? -->
-<footer class="navigation-area d-flex flex-column justify-content-end pb-3">
-    <h6 onClick="openPopupForm()">¡empecemos!</h6>
-</footer>
-
-
-<!--Formulario de inicio -->
-<div id="welcome-form" class="welc-form">
-    <!--Contenedor del formulario-->
-    <div id="form-popup" class="col-lg-10 card-basic active">
-        <!--Botón cerrar formulario-->
-        <button type="button" id="close-form" class="close" onClick="closeForm()" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-
-        <div class="mx-auto row d-flex flex-column">
-            <div class="card-info">
-                <p class="text-center">Antes de empezar, necesitamos saber algunos datos sobre tu viaje.</p>
-                <!--aquí habría que meter alguna nota de privacidad?-->
-            </div>
-
-            <form id="initial-form"  class="col-lg-6 mx-auto" action="">
-                <!--Llegada y salida-->
-                <div class="row">
-                    <!--Llegada-->
-                    <div class="col-lg-6  mt-3 mt-lg-5">
-                        <label for="arrival"> Llegada </label><br>
-                        <input type="date" id="arrival" name="arrival" min="" class="w-100">
-                    </div>
-
-                    <!--Salida-->
-                    <div class="col-lg-6  mt-3 mt-lg-5">
-                        <label for="departure"> Salida </label><br>
-                        <input type="date" id="departure" name="departure" max="" class="w-100"><br>
-                    </div>
-                </div>
-
-                <!--Número de personas-->
-                <div class="row">
-                    <!-- Adultos. Aquí quiero poner selector tipo AirBnb-->
-                    <div class="col-lg-6  mt-3 mt-lg-5">
-                        <label for="adults"> Adultos </label><br>
-                        <input type="number" id="adults" name="adults" min="1" max="16" value="1" class="w-100">
-                    </div>
-                    <!-- Niños-->
-                    <div class="col-lg-6 mt-3 mt-lg-5">
-                        <label for="children"> Niños </label><br>
-                        <input type="number" id="children" name="children" min="0" max="5" value="0" class="w-100"><br>
-                    </div>
-                </div>
-
-                <!--Alojamiento.
-                Aquí quiero poner búsqueda por mapa y dirección. A definir-->
-                <div class=" mt-3 mt-lg-5">
-                    <label for="accommodation"> Alojamiento </label><br>
-                    <input type="alojamiento" id="accommodation" name="accommodation" class="w-100"><br>
-                </div>
-                <div class="form-login">
-                    <p onClick="openRegister()">Crear usuario</p> <p> / </p><p onClick="openLogin()">entrar</p>
-                </div>
-
-                <!--Botón-->
-                <input type="submit" value="enviar" class="w-50 mt-5">
-            </form>
+<!--Cabecera con título principal de la web-->
+<header id="intro" class="full-container">
+    <div class="content-intro d-flex">
+        <!--imagen nube-->
+        <div class="mr-auto align-self-end">
+            <img src="imgs/cloud.svg" width="234" height="137" alt="cloud-of-Barcelona">
+        </div>
+        <!--imagen sol-->
+        <div class="ml-auto">
+            <img src="imgs/sun.svg" width="210" height="210" alt="sun-of-Barcelona">
         </div>
     </div>
-</div>
+    <div id="main-title">
+        <h1>Barcelona trip planner</h1>
+    </div>
+
+</header>
 
 
-<!--Formulario de login personal-->
-<div id="login-form" class="login-form">
-    <!--Contenedor del formulario-->
-    <div id="login-popup" class="col-lg-10 card-basic active">
-            <!-- contenedor con ilustración -->
-            <div class="off-login col-lg-6 d-none d-lg-flex flex-column">
-                <div class="card-title-light">
-                    <h3>¡Hola!</h3>
-                </div>
 
-                <div class="card-dark-image col-8 mx-auto">
-                    <img src="img/noun_barcelona_1074996.svg" alt="ilustración de Barcelona">
-                </div>
-            </div>
-
-            <!-- contenedor para logearse -->
-            <div class="on-login col-lg-6">
-                <div class="card-title-dark">
-                    <h3>Entrar</h3>
-                </div>
-
-                <form id="login-screen"  class="col-lg-10 mx-auto pt-3" action="">
-                    <!--Usuario-->
-                    <div class=" mt-3 mt-lg-5">
-                        <label for="user"> Usuario </label><br>
-                        <input type="email" id="user" name="user" class="w-100" placeholder="usuario@mimail.com"><br>
-                    </div>
-
-                    <!--Contraseña-->
-                    <div class=" mt-3 mt-lg-5">
-                        <label for="user"> Contraseña </label><br>
-                        <input type="password" id="user-password" name="user-password" class="w-100" placeholder="">icono ojo dentro del input
-                        <!--¿Cómo meto el ojito aquí?-->
-                    </div>
-
-                    <!-- Olvidaste tu contraseña?-->
-                    <div class="form-login">
-                        <p>¿Olvidaste tu contraseña?</p>
-                    </div>
-
-                    <!--Botón-->
-                    <div class="center-button">
-                        <input type="submit" value="enviar" class="w-50 mt-5">
-                    </div>
-                </form>
-
-                <div class="form-register">
-                    <p onClick="openRegister()">¿No tienes cuenta?</p> <p class="highlight" onClick="openRegister()">Crear cuenta</p>
-                </div>
-            </div>
+<!-- La forma de nubes que hace de transición -->
+<!-- Me gustaría que se viese toda la forma de las nubes y que al hacer scroll tuviese un efecto parallax-->
+<div id="intro-illustration" class="full-container d-flex flex-column align-items-center rellax" data-rellax-speed="-7">
+    <div class="nav-icon">
+        <a href="#intro-text" class="d-flex flex-column align-items-center">
+            <i class="icon-mouse"></i>
+            <small class="light">scroll</small>
+        </a>
     </div>
 </div>
 
+<!-- Texto introductorio explicando brevemente web-->
+<section id="intro-text">
+    <div class="content-intro-text d-flex align-items-center">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta quam non orci malesuada condimentum. Duis condimentum felis posuere urna porttitor, vel dignissim mauris varius. Nulla non velit metus. Aenean.</h2>
+    </div>
+</section>
 
-<!--Formulario de registro personal-->
-<div id="register-form" class="register-form">
-    <!--Contenedor del formulario-->
-    <div id="login-popup" class="col-lg-10 card-basic active">
-            <!-- contenedor para registrarse -->
-            <div class="on-register col-lg-6">
-                <div class="card-title-dark">
-                    <h3>Registro</h3>
-                </div>
 
-                <form id="register-screen"  class="col-lg-10 mx-auto pt-3" action="">
-                    <!--Usuario-->
-                    <div class="mt-3 mt-lg-3">
-                        <!--Nombre usuario-->
-                        <label for="name"> Nombre de usuario </label><br>
-                        <input type="text" id="name" name="name" class="w-100" placeholder="nombre"><br>
 
-                    </div>
+<!--Contenedor con el primer formulario.
+Antes de empezar dinos algo sobre ti-->
+<section class="blue d-flex align-items-center">
+    <div class="card d-flex flex-column">
 
-                    <!--Mail-->
-                    <div class="mt-3 mt-lg-3">
-                        <label for="email"> Email </label><br>
-                        <input type="email" id="email" name="email" class="w-100" placeholder="">
-                        <!--¿Cómo meto el ojito aquí?-->
-                    </div>
-                    <!--Mail-->
-                    <div class="mt-3 mt-lg-3">
-                        <label for="r-password"> Contraseña </label><br>
-                        <input type="password" id="r-password" name="r-password" class="w-100" placeholder="">
-                        <!--¿Cómo meto el ojito aquí?-->
-                    </div>
+        <!--Icono para cerrar la tarjeta-->
+        <div class="d-flex">
+            <a href="" class="ml-auto">
+                <i class="icon-close-cross ml-auto"></i>
+            </a>
+        </div>
 
-                    <!--Botón-->
-                    <div class="center-button">
-                        <input type="submit" value="enviar" class="w-50 mt-5">
-                    </div>
-                </form>
+        <form id= "intro-form" class="d-flex flex-column align-items-center pt-5">
+            <!--Pregunta e información general-->
+            <fieldset class="form-header mb-5">
+                <h3>Antes de empezar, dinos algo sobre tu estancia</h3>
+                <p class="form-info">Estos datos son únicamente informativos y no se almacenan</p>
+            </fieldset>
 
-                <div class="form-register">
-                    <p>¿Ya estás registrado?</p> <p class="highlight" onClick="openLogin()">Entrar</p>
+            <div class= "form-row form-open">
+                <div class= "form-group w-100 mt-5">
+                    <label class="open-label" for="day-count">¿Cuántos días estarás en Barcelona?</label>
+                    <input id="day-count" class="open" name="day-count" type="number" placeholder="Ej. 1 día">
                 </div>
             </div>
 
-            <!-- contenedor con ilustración -->
-            <div class="off-register col-lg-6 d-none d-lg-flex flex-column">
-                <div class="card-title-light">
-                    <h3>¡Hola!</h3>
-                </div>
-
-                <div class="card-dark-image col-8 mx-auto">
-                    <img src="img/noun_barcelona_1074996.svg" alt="ilustración de Barcelona">
+            <div class= "form-row form-open">
+                <div class= "form-group w-100 mt-5">
+                    <label class="open-label" for="accommodation-address">Dirección de tu alojamiento</label>
+                    <input id="accommodation-address" class="open" name="accommodation-address" type="text" placeholder="Ej. Plaza Catalunya, 36">
                 </div>
             </div>
+
+            <div class="optional ml-auto">
+                <a href="#aux-ff">No lo sé</a>
+            </div>
+
+            <!-- Botón de enviar formulario
+            Poner el enlace en el botón -->
+            <div class="enviar-formulario">
+                <button type="submit" class="btn"><i class="icon-arrow-right-conf"></i></button>
+            </div>
+        </form>
 
     </div>
-</div>
+</section>
 
-    <script src="js/main.js"></script>
+
+
+<!--Pantalla si no sabes/quieres rellenar el primer formulario-->
+<section id="aux-ff"class="blue d-flex align-items-center">
+    <div class="card">
+        <div class="auxiliar-text-container h-100 d-flex flex-column justify-content-center">
+            <h3>No pasa nada, se te mostrarán opciones genéricas para tu estancia</h3>
+        </div>
+        <div class="d-flex">
+            <a href="#arrival" class="ml-auto">
+                <i class="icon-arrow-right-conf"></i>
+            </a>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<!-- FASE 1. LLEGADA A BARCELONA
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--ARRIVAL FORM.
+1. ¿Cómo llegas a Barcelona?-->
+<section id="arrival" class="blue d-flex align-items-center">
+    <div class="card d-flex flex-column justify-content-between">
+        <!-- Icono X. Al apretar vamos a la pantalla principal de nuevo -->
+        <div class="d-flex">
+            <a href="" class="ml-auto" role="button>
+                <i class="icon-close-cross ml-auto"></i>
+            </a>
+        </div>
+
+        <!-- formulario cómo llegas a Barcelona? -->
+        <form id= "arrival-form" class="d-flex flex-column align-items-center pt-5">
+            <!--Pregunta e información general-->
+            <fieldset class="form-header">
+                <h3>¿Cómo llegas a Barcelona?</h3>
+                <p class="form-info">Selecciona una de las siguientes opciones</p>
+            </fieldset>
+
+            <!--Cambio de estilo en formulario. Estilo elige una opción -->
+            <div class="choose-form row w-100 mx-auto d-flex justify-content-between m-5">
+                <!-- Tengo que añadir iconos en los botones -->
+                <a href="#que-terminal" class="btn btn-mine col-2 m-3" role="button">
+                    <i class="icon-flight button-icon"></i> avión </a>
+                <a href="" class="btn btn-mine col-2 m-3" role="button">
+                    <i class="icon-train button-icon"></i>tren </a>
+                <a href="" class="btn btn-mine col-2 m-3" role="button">
+                    <i class="icon-cab button-icon"></i>coche </a>
+                <a href=""  class="btn btn-mine col-2 m-3" role="button">
+                    <i class="icon-bus button-icon"></i>bus </a>
+                <a href=""  class="btn btn-mine col-2 m-3" role="button">
+                    <i class="icon-ship button-icon"></i>barco </a>
+            </div>
+        </form>
+
+        <div class="d-flex">
+            <a href="#chooseTransport" class="ml-auto">
+                <i class="icon-arrow-right-conf"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- A qué terminal llegas?-->
+<section id="que-terminal" class="blue d-flex align-items-center">
+    
+    <div class="card d-flex flex-column justify-content-between">
+        <div class="row">
+            <!-- Breadcrumbs con opciones elegidas -->
+            <div class="row card-breadcr mr-auto pl-5 d-flex align-items-center">
+                <!--Llegada en avión-->
+                <a href="#arrival" class="d-flex flex-row">
+                    <i class="icon-flight"> </i>
+                    <h6>Llegada en avión</h6>
+                </a>
+            </div>
+
+            <!-- Icono X. Al apretar vamos a la pantalla principal de nuevo -->
+            <div class="d-flex">
+                <a href="" class="ml-auto pr-3">
+                    <i class="icon-close-cross ml-auto"></i>
+                </a>
+            </div>
+                   
+        </div>
+
+        <!-- formulario ¿A qué terminal llegas? -->
+        <form id= "" class="d-flex flex-column align-items-center pt-5">
+            <!--Pregunta e información general-->
+            <fieldset class="form-header">
+                <h3>¿A qué terminal llegas?</h3>
+                <p class="form-info">Selecciona una de las siguientes opciones</p>
+            </fieldset>
+
+            <!--Cambio de estilo en formulario. Estilo elige una opción -->
+            <div class="choose-form row w-100 mx-auto d-flex justify-content-around m-5">
+                <!-- Tengo que añadir iconos en los botones -->
+                <a href="#chooseTransport" class="btn btn-mine col-2 ml-auto m-3" >T1 </a>
+                <a href="#chooseTransport" class="btn btn-mine col-2 mr-auto m-3" >T2 </a>
+            </div>
+        </form>
+
+        <div class="d-flex">
+            <a href="#arrival" class="mr-auto">
+                <i class="icon-arrow-left-conf"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- ¿Como quieres ir a tu alojamiento? -->
+<section id="chooseTransport" class="blue d-flex align-items-center">
+    <div class="card d-flex flex-column justify-content-between">
+        <div class="row">
+
+            <!-- Breadcrumbs con opciones elegidas -->
+            <div class="row card-breadcr mr-auto pl-5 d-flex align-items-center">
+            <!--Llegada en avión-->
+            <a href="#arrival" class="d-flex flex-row">
+                <i class="icon-flight"> </i>
+                    <h6>Llegada en avión</h6>
+            </a>
+
+            <div class="bread-line"></div>
+
+            <!--Terminal 1-->
+            <a href="#que-terminal" class="d-flex flex-row">
+                <i class="icon-location"> </i>
+                    <h6>Terminal 1</h6>
+            </a>
+            </div>
+
+            <!-- Icono X. Al apretar vamos a la pregunta anterior (a qué terminal llegas) -->
+            <div class="d-flex">
+                <a href="" class="ml-auto pr-3">
+                <i class="icon-close-cross ml-auto"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- formulario ¿Cómo quieres ir a tu alojamiento? -->
+        <form id= "" class="d-flex flex-column align-items-center pt-5">
+            <!--Pregunta e información general-->
+            <fieldset class="form-header">
+                <h3>¿Cómo quieres ir a tu alojamiento?</h3>
+                <p class="form-info">Selecciona una de las siguientes opciones</p>
+            </fieldset>
+
+            <!--Estilo formulario elige una opción -->
+            <div class="choose-form row w-100 mx-auto d-flex flex-nowrap justify-content-around m-5">
+                <!-- Tengo que añadir iconos en los botones -->
+                <a href="#fastOption" class="btn btn-mine col-3 m-3">
+                    <i class="icon-fast button-icon mr-3"></i>rápido </a>
+                <a href="" class="btn btn-mine col-3 m-3">
+                    <i class="icon-money button-icon"></i>económico </a>
+                <a href=""  class="btn btn-mine col-3 m-3">
+                    <i class="icon-cab button-icon"></i>en coche </a>
+            </div>
+        </form>
+
+        <!-- Flecha para ir atrás -->
+        <div class="d-flex">
+            <a href="#que-terminal" class="mr-auto">
+                <i class="icon-arrow-left-conf"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- Opción rápido -->
+<section id="fastOption" class="blue d-flex align-items-center">
+    <div class="card d-flex flex-column justify-content-between">
+        <div class="row">
+
+            <!-- Breadcrumbs con opciones elegidas -->
+            <div class="row card-breadcr mr-auto pl-5 d-flex align-items-center">
+            <!--Llegada en avión-->
+            <a href="#arrival" class="d-flex flex-row">
+                <i class="icon-flight"> </i>
+                    <h6>Llegada en avión</h6>
+            </a>
+
+            <div class="bread-line"></div>
+
+            <!--Terminal 1-->
+            <a href="#que-terminal" class="d-flex flex-row">
+                <i class="icon-location"> </i>
+                    <h6>Terminal 1</h6>
+            </a>
+
+            <div class="bread-line"></div>
+
+            <!--Rápido.
+            Añadir icono rápido-->
+            <a href="#chooseTransport" class="d-flex flex-row">
+                <i class="icon-location"> </i>
+                    <h6>Rápido</h6>
+            </a>
+            </div>
+
+            <!-- Icono X. Al apretar vamos a la pregunta anterior (a qué terminal llegas) -->
+            <div class="d-flex">
+                <a href="" class="ml-auto pr-3">
+                <i class="icon-close-cross ml-auto"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- formulario ¿Cómo quieres ir a tu alojamiento? -->
+        <form id= "" class="d-flex flex-column align-items-center pt-5">
+            <!--Pregunta e información general-->
+            <fieldset class="form-header">
+                <h3>Quieres ir rápido. ¿Qué opción te apetece más?</h3>
+                <p class="form-info">Selecciona una de las siguientes opciones</p>
+            </fieldset>
+
+            <!--Estilo formulario elige una opción -->
+            <div class="choose-form row w-100 mx-auto d-flex flex-nowrap justify-content-around m-5">
+                <!-- Tengo que añadir iconos en los botones -->
+                <a href="" class="btn btn-mine col-3 m-3" role="button">
+                    <i class="icon-taxi button-icon"></i>taxi </a>
+                <a href="" class="btn btn-mine col-3 m-3" role="button">
+                    <i class="icon-bus button-icon"></i>aerobús </a>
+                <a href=""  class="btn btn-mine col-3 m-3" role="buttons">
+                    <i class="icon-cab button-icon"></i>traslado privado </a>
+            </div>
+        </form>
+
+        <!-- Flecha para ir atrás -->
+        <div class="row d-flex pl-4">
+            <a href="#chooseTransport" class="mr-auto">
+                <i class="icon-arrow-left-conf"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+    <script src = "js/main.js"></script>
     <script src = "js/jquery-3.5.1.slim.min.js"></script>
     <script src = "js/popper.min.js"></script>
     <script src = "js/bootstrap.min.js"></script>

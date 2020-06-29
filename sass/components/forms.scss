@@ -1,0 +1,80 @@
+@import "globals";
+
+//esto se pone así????
+
+/*
+************************************************************************************
+FORMULARIOS
+************************************************************************************
+*/
+
+.blue {
+  background-color: $primary-color;
+  padding: 7%;
+  height: 100vh;
+}
+
+.card {
+  width: 90vw;
+  height: 90vh;
+  padding: 15px 25px;
+  background-color: $light-color;
+  border-radius: 4em;
+}
+
+.form-info {
+  color: $primary-color;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.form-open {
+  width: 50%;
+}
+
+.open {
+  width: 100%;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: $primary-color;
+  background-color: transparent;
+}
+
+.open-label {
+  color: $primary-color;
+  text-transform: uppercase;
+}
+
+.optional {
+    margin-right: 25%;
+  a {
+    color: $contrast-color;
+    font-weight: $semi-bold;
+  }
+}
+
+
+/*
+FORMULARIO CON OPCIONES PARA ELEGIR
+*/
+
+
+
+/*
+BREADCRUMBS
+*/
+.bread-line {
+  border-bottom: 1px solid $dark-color;
+  width: 30px;
+  margin: 0 5px 10px 8px;
+}
+
+/*
+************************************************************************************
+PANTALLAS AUXILIARES
+************************************************************************************
+*/
+
+.auxiliar-text-container {
+  padding: 0 25%;
+}

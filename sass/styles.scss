@@ -2,7 +2,7 @@
 @import "components/icons";
 @import "components/forms";
 @import "components/buttons";
-
+@import "components/responsive";
 
 .content-intro {
   padding: 2% 6%;
@@ -14,14 +14,16 @@ INTRO **************************************************************************
 ******************************************************************************************
 */
 
+
 #intro {
     height: 85vh;
+    position: relative;
+    z-index: -1;
 }
 
-#main-title {
-    margin: 0 30%;
+.cloud {
+  postion: absolute;
 }
-
 #intro-illustration {
   background-image: url('../imgs/cloud-transition.svg');
   background-size: cover;
@@ -35,10 +37,9 @@ INTRO **************************************************************************
   padding-bottom: 2rem;
 }
 
-.content-intro-text {
+.intro-text-container {
   background-color: $primary-color;
   height: 100vh;
-  padding: 0 30%;
 }
 
 

@@ -44,15 +44,16 @@ h1, h2 {
 h1 {
   font-weight: $black;
   color: $primary-color;
-  font-size: 6vw;
+  font-size: 6rem;
   line-height: 1em;
   //cambiar el font size con lo que me enseñó Albert
 }
 
 h2 {
   color: $light-color;
-  font-weight: $medium;
+  font-weight: $light;
   font-size: 2rem;
+  line-height: 1.5em;
 }
 
 h3 {

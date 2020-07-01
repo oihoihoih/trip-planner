@@ -21,13 +21,14 @@ h1, h2 {
 h1 {
   font-weight: 900;
   color: #4452CF;
-  font-size: 6vw;
+  font-size: 6rem;
   line-height: 1em; }
 
 h2 {
   color: #ECF0F1;
-  font-weight: 500;
-  font-size: 2rem; }
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.5em; }
 
 h3 {
   color: #4452CF;
@@ -66,13 +67,13 @@ small.light {
 .icon-close-cross {
   font-family: 'fontello';
   font-style: normal;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #4452CF; }
 
 .icon-arrow-right-conf, .icon-arrow-left-conf {
   font-family: 'fontello';
   font-style: normal;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #4452CF; }
 
 .icon-flight, .icon-location {
@@ -101,13 +102,14 @@ h1, h2 {
 h1 {
   font-weight: 900;
   color: #4452CF;
-  font-size: 6vw;
+  font-size: 6rem;
   line-height: 1em; }
 
 h2 {
   color: #ECF0F1;
-  font-weight: 500;
-  font-size: 2rem; }
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.5em; }
 
 h3 {
   color: #4452CF;
@@ -137,15 +139,18 @@ FORMULARIOS
 */
 .blue {
   background-color: #4452CF;
-  padding: 7%;
+  padding: 6vh;
   height: 100vh; }
 
 .card {
-  width: 90vw;
-  height: 90vh;
-  padding: 15px 25px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
   background-color: #ECF0F1;
-  border-radius: 4em; }
+  border-radius: 2em; }
+
+.card-row {
+  height: 50px; }
 
 .form-info {
   color: #4452CF;
@@ -183,6 +188,9 @@ BREADCRUMBS
   width: 30px;
   margin: 0 5px 10px 8px; }
 
+.bread {
+  height: 100%; }
+
 /*
 ************************************************************************************
 PANTALLAS AUXILIARES
@@ -211,6 +219,29 @@ PANTALLAS AUXILIARES
 .button-icon:hover {
   color: #ECF0F1; }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 4rem; }
+
+  h2 {
+    font-size: 1.5rem; } }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 5rem; }
+
+  h2 {
+    font-size: 1.5rem; } }
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 5rem; }
+
+  h2 {
+    font-size: 1.8rem; } }
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 .content-intro {
   padding: 2% 6%; }
 
@@ -220,10 +251,12 @@ INTRO **************************************************************************
 ******************************************************************************************
 */
 #intro {
-  height: 85vh; }
+  height: 85vh;
+  position: relative;
+  z-index: -1; }
 
-#main-title {
-  margin: 0 30%; }
+.cloud {
+  postion: absolute; }
 
 #intro-illustration {
   background-image: url("../imgs/cloud-transition.svg");
@@ -236,10 +269,9 @@ INTRO **************************************************************************
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
-.content-intro-text {
+.intro-text-container {
   background-color: #4452CF;
-  height: 100vh;
-  padding: 0 30%; }
+  height: 100vh; }
 
 /*
 ******************************************************************************************

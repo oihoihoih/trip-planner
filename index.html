@@ -28,15 +28,17 @@
     <div class="content-intro d-flex">
         <!--imagen nube-->
         <div class="mr-auto align-self-end">
-            <img src="imgs/cloud.svg" width="234" height="137" alt="cloud-of-Barcelona">
+            <img src="imgs/cloud.svg" width="234" height="137" class="cloud" alt="cloud-of-Barcelona">
         </div>
         <!--imagen sol-->
         <div class="ml-auto">
             <img src="imgs/sun.svg" width="210" height="210" alt="sun-of-Barcelona">
         </div>
+
+        <!--Añadir una nube más-->
     </div>
-    <div id="main-title">
-        <h1>Barcelona trip planner</h1>
+    <div id="main-title" class="title-container d-flex flex-column align-items-center">
+        <h1 class="col-lg-4">Barcelona trip planner</h1>
     </div>
 
 </header>
@@ -44,10 +46,10 @@
 
 
 <!-- La forma de nubes que hace de transición -->
-<!-- Me gustaría que se viese toda la forma de las nubes y que al hacer scroll tuviese un efecto parallax-->
-<div id="intro-illustration" class="full-container d-flex flex-column align-items-center rellax" data-rellax-speed="-7">
+
+<div id="intro-illustration" class="cloudTransition full-container d-flex flex-column align-items-center">
     <div class="nav-icon">
-        <a href="#intro-text" class="d-flex flex-column align-items-center">
+        <a href="#" class="d-flex flex-column align-items-center">
             <i class="icon-mouse"></i>
             <small class="light">scroll</small>
         </a>
@@ -55,8 +57,8 @@
 </div>
 
 <!-- Texto introductorio explicando brevemente web-->
-<section id="intro-text">
-    <div class="content-intro-text d-flex align-items-center">
+<section id="intro-text" class="intro-text-container d-flex align-items-center">
+    <div class="content-intro-text col-lg-6 p-5 mx-auto">
         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta quam non orci malesuada condimentum. Duis condimentum felis posuere urna porttitor, vel dignissim mauris varius. Nulla non velit metus. Aenean.</h2>
     </div>
 </section>
@@ -182,7 +184,7 @@ Antes de empezar dinos algo sobre ti-->
 <section id="que-terminal" class="blue d-flex align-items-center">
     
     <div class="card d-flex flex-column justify-content-between">
-        <div class="row">
+        <div class="row card-row">
             <!-- Breadcrumbs con opciones elegidas -->
             <div class="row card-breadcr mr-auto pl-5 d-flex align-items-center">
                 <!--Llegada en avión-->
@@ -217,10 +219,12 @@ Antes de empezar dinos algo sobre ti-->
             </div>
         </form>
 
-        <div class="d-flex">
-            <a href="#arrival" class="mr-auto">
+        <div class="row card-row mb-3">
+            <div class="d-flex">
+                <a href="#arrival" class="mr-auto pl-4">
                 <i class="icon-arrow-left-conf"></i>
-            </a>
+                </a>
+            </div>
         </div>
 
     </div>
@@ -231,7 +235,7 @@ Antes de empezar dinos algo sobre ti-->
 <!-- ¿Como quieres ir a tu alojamiento? -->
 <section id="chooseTransport" class="blue d-flex align-items-center">
     <div class="card d-flex flex-column justify-content-between">
-        <div class="row">
+        <div class="row card-row">
 
             <!-- Breadcrumbs con opciones elegidas -->
             <div class="row card-breadcr mr-auto pl-5 d-flex align-items-center">
@@ -278,10 +282,12 @@ Antes de empezar dinos algo sobre ti-->
         </form>
 
         <!-- Flecha para ir atrás -->
-        <div class="d-flex">
-            <a href="#que-terminal" class="mr-auto">
+        <div class="row card-row mb-3">
+            <div class="d-flex">
+                <a href="#que-terminal" class="mr-auto pl-4">
                 <i class="icon-arrow-left-conf"></i>
-            </a>
+                </a>
+            </div>
         </div>
 
     </div>
@@ -349,10 +355,12 @@ Antes de empezar dinos algo sobre ti-->
         </form>
 
         <!-- Flecha para ir atrás -->
-        <div class="row d-flex pl-4">
-            <a href="#chooseTransport" class="mr-auto">
+        <div class="row card-row mb-3">
+            <div class="d-flex">
+                <a href="#chooseTransport" class="mr-auto pl-4">
                 <i class="icon-arrow-left-conf"></i>
-            </a>
+                </a>
+            </div>
         </div>
 
     </div>

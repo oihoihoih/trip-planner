@@ -7,7 +7,7 @@
 /*usado*/
 /* reglas generales */
 body {
-  background-color: #ECF0F1;
+  background-color: #4452CF;
   width: 100%;
   font-family: "poppins", sans-serif;
   font-weight: 400;
@@ -75,6 +75,19 @@ FORMULARIOS
   color: #4452CF;
   padding-top: 1.5rem;
   text-align: center; }
+
+/*
+************************************************************************************
+FORMULARIO INTRODUCCIÓN
+************************************************************************************
+*/
+.intro-form-section {
+  transition: all 0.3s ease;
+  opacity: 0; }
+
+.intro-form-section.active {
+  visibility: visible;
+  opacity: 1; }
 
 .form-open {
   width: 50%; }

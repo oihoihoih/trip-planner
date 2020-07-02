@@ -14,6 +14,10 @@ INTRO **************************************************************************
 ******************************************************************************************
 */
 
+header {
+  background-color: $light-color;
+  height: 100vh;
+}
 
 #intro {
     height: 85vh;
@@ -26,20 +30,15 @@ INTRO **************************************************************************
 }
 #intro-illustration {
   background-image: url('../imgs/cloud-transition.svg');
+  background-color: $light-color;
   background-size: cover;
   height: auto;
   background-repeat: no-repeat;
-  z-index: -9999;
 }
 
-.nav-icon {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
 
 .intro-text-container {
-  background-color: $primary-color;
-  height: 100vh;
+  height: 90vh;
 }
 
 

@@ -1,6 +1,7 @@
-@import "globals";
 
 //esto se pone así????
+@import "globals";
+
 
 /*
 ************************************************************************************
@@ -30,6 +31,23 @@ FORMULARIOS
   color: $primary-color;
   padding-top: 1.5rem;
   text-align: center;
+}
+
+
+/*
+************************************************************************************
+FORMULARIO INTRODUCCIÓN
+************************************************************************************
+*/
+
+.intro-form-section {
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.intro-form-section.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .form-open {

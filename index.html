@@ -46,9 +46,8 @@
 
 
 <!-- La forma de nubes que hace de transición -->
-
 <div id="intro-illustration" class="cloudTransition full-container d-flex flex-column align-items-center">
-    <div class="nav-icon">
+    <div id="mouse" class="nav-icon">
         <a href="#" class="d-flex flex-column align-items-center">
             <i class="icon-mouse"></i>
             <small class="light">scroll</small>
@@ -57,18 +56,25 @@
 </div>
 
 <!-- Texto introductorio explicando brevemente web-->
-<section id="intro-text" class="intro-text-container d-flex align-items-center">
-    <div class="content-intro-text col-lg-6 p-5 mx-auto">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta quam non orci malesuada condimentum. Duis condimentum felis posuere urna porttitor, vel dignissim mauris varius. Nulla non velit metus. Aenean.</h2>
+<section class="blue">
+    <div id="intro-text" class="intro-text-container d-flex align-items-center">
+        <div class="content-intro-text col-lg-6 p-5 mx-auto">
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta quam non orci malesuada condimentum. Duis condimentum felis posuere urna porttitor, vel dignissim mauris varius. Nulla non velit metus. Aenean.</h2>
+        </div>
     </div>
+    <div class="nav-icon">
+        <a href="#intro-form-section" onClick="gotoDiv()" class="d-flex flex-column align-items-center">
+            <small class="light vamos">¡vamos!</small>
+        </a>
+    </div>
+
 </section>
 
 
 
-<!--Contenedor con el primer formulario.
-Antes de empezar dinos algo sobre ti-->
-<section class="blue d-flex align-items-center">
-    <div class="card d-flex flex-column">
+<!--Antes de empezar dinos algo sobre ti-->
+<section id="intro-form-section" class="blue">
+    <div id="intro-form" class="card intro-form-section card-intro-form d-flex flex-column">
 
         <!--Icono para cerrar la tarjeta-->
         <div class="d-flex">
@@ -104,8 +110,8 @@ Antes de empezar dinos algo sobre ti-->
 
             <!-- Botón de enviar formulario
             Poner el enlace en el botón -->
-            <div class="enviar-formulario">
-                <button type="submit" class="btn"><i class="icon-arrow-right-conf"></i></button>
+            <div class="form-open enviar-formulario d-flex justify-content-end">
+                <button type="submit" class="btn btn-intro">Vamos</button>
             </div>
         </form>
 

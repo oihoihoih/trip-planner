@@ -7,7 +7,7 @@
 /*usado*/
 /* reglas generales */
 body {
-  background-color: #ECF0F1;
+  background-color: #4452CF;
   width: 100%;
   font-family: "poppins", sans-serif;
   font-weight: 400;
@@ -62,7 +62,11 @@ small.light {
   font-style: normal;
   font-weight: normal;
   font-size: 3rem;
-  color: #ECF0F1; }
+  color: #ECF0F1;
+  padding-top: 2rem; }
+
+.nav-icon {
+  padding-bottom: 2rem; }
 
 .icon-close-cross {
   font-family: 'fontello';
@@ -88,7 +92,7 @@ small.light {
 /*usado*/
 /* reglas generales */
 body {
-  background-color: #ECF0F1;
+  background-color: #4452CF;
   width: 100%;
   font-family: "poppins", sans-serif;
   font-weight: 400;
@@ -157,6 +161,19 @@ FORMULARIOS
   padding-top: 1.5rem;
   text-align: center; }
 
+/*
+************************************************************************************
+FORMULARIO INTRODUCCIÓN
+************************************************************************************
+*/
+.intro-form-section {
+  transition: all 0.3s ease;
+  opacity: 0; }
+
+.intro-form-section.active {
+  visibility: visible;
+  opacity: 1; }
+
 .form-open {
   width: 50%; }
 
@@ -199,6 +216,17 @@ PANTALLAS AUXILIARES
 .auxiliar-text-container {
   padding: 0 25%; }
 
+.btn-intro {
+  border: 2px solid #4452CF;
+  border-radius: 25px;
+  width: 150px;
+  height: 50px;
+  color: #4452CF;
+  margin-top: 3rem; }
+  .btn-intro:hover {
+    background-color: #4452CF;
+    color: #ECF0F1; }
+
 .btn-mine {
   border: 2px solid #4452CF;
   border-radius: 30px;
@@ -207,17 +235,15 @@ PANTALLAS AUXILIARES
   font-weight: 600;
   text-align: center;
   padding: 16px 5px; }
-
-.btn-mine:hover {
-  background-color: #4452CF;
-  color: #ECF0F1; }
+  .btn-mine:hover {
+    background-color: #4452CF;
+    color: #ECF0F1; }
 
 .button-icon {
   color: #4452CF;
   margin: 10px; }
-
-.button-icon:hover {
-  color: #ECF0F1; }
+  .button-icon:hover {
+    color: #ECF0F1; }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -250,6 +276,10 @@ PANTALLAS AUXILIARES
 INTRO ************************************************************************************
 ******************************************************************************************
 */
+header {
+  background-color: #ECF0F1;
+  height: 100vh; }
+
 #intro {
   height: 85vh;
   position: relative;
@@ -260,18 +290,13 @@ INTRO **************************************************************************
 
 #intro-illustration {
   background-image: url("../imgs/cloud-transition.svg");
+  background-color: #ECF0F1;
   background-size: cover;
   height: auto;
-  background-repeat: no-repeat;
-  z-index: -9999; }
-
-.nav-icon {
-  padding-top: 2rem;
-  padding-bottom: 2rem; }
+  background-repeat: no-repeat; }
 
 .intro-text-container {
-  background-color: #4452CF;
-  height: 100vh; }
+  height: 90vh; }
 
 /*
 ******************************************************************************************

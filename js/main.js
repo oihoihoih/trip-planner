@@ -53,3 +53,27 @@ var cloudTransition = document.querySelector('.cloudTransition');
 cloudTransition.addEventListener('click', function() {
     smoothScroll('.intro-text-container', 1000);
 });
+
+// Aquí me gustaría que también se activase el scroll haciendo scroll
+cloudTransition.addEventListener('scroll', function() {
+    smoothScroll('.intro-text-container', 1000);
+});
+
+
+//
+//
+// TRANSICIONES
+//
+//
+
+//
+//
+// ENLACES
+//
+//
+
+function gotoDiv() {
+    var introForm = document.getElementById('intro-form');
+
+    introForm.classList.add('active');
+}

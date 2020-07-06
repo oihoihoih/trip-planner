@@ -15,6 +15,22 @@ FORMULARIOS
   height: 100vh;
 }
 
+.form-box {
+  background-color: transparent;
+  padding: 6vh;
+  height: 100vh;
+  display: none;
+}
+
+.form-box.active {
+  display: flex;
+  opacity: 1;
+}
+
+.visibility.invisible {
+  diplay: none;
+}
+
 .card {
   width: 100%;
   height: 100%;
@@ -37,18 +53,7 @@ FORMULARIOS
 /*
 ************************************************************************************
 FORMULARIO INTRODUCCIÓN
-************************************************************************************
-*/
-
-.intro-form-section {
-  transition: all 0.3s ease;
-  opacity: 0;
-}
-
-.intro-form-section.active {
-  visibility: visible;
-  opacity: 1;
-}
+**********************************************************/
 
 .form-open {
   width: 50%;
@@ -65,7 +70,7 @@ FORMULARIO INTRODUCCIÓN
 .open-label {
   color: $primary-color;
   text-transform: uppercase;
-}
+  }
 
 .optional {
     margin-right: 25%;
@@ -103,3 +108,11 @@ PANTALLAS AUXILIARES
 .auxiliar-text-container {
   padding: 0 25%;
 }
+
+
+/*
+************************************************************************************
+VALIDACIÓN FORMULARIOS
+************************************************************************************
+*/
+

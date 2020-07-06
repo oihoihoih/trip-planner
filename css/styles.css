@@ -12,6 +12,8 @@ body {
   font-family: "poppins", sans-serif;
   font-weight: 400;
   color: #1F2933; }
+  body.transport {
+    background-color: #ECF0F1; }
 
 h1, h2 {
   font-family: "poppins", sans-serif;
@@ -37,6 +39,22 @@ h3 {
   text-align: center;
   line-height: 1.5em; }
 
+h4 {
+  color: #E74C3C;
+  font-size: 2rem;
+  font-weight: 700; }
+
+.destacado {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #E74C3C; }
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1F2933; }
+
 h6 {
   font-size: 0.9rem;
   color: #1F2933;
@@ -44,6 +62,11 @@ h6 {
   line-height: 1.8em;
   font-weight: 400;
   letter-spacing: 1px; }
+
+.link {
+  font-size: 1rem;
+  color: #E74C3C !important;
+  font-weight: 500; }
 
 /*Utilizo esta clase únicamente para textos tipo leyenda. Ej. "Scroll"*/
 small.light {
@@ -97,6 +120,8 @@ body {
   font-family: "poppins", sans-serif;
   font-weight: 400;
   color: #1F2933; }
+  body.transport {
+    background-color: #ECF0F1; }
 
 h1, h2 {
   font-family: "poppins", sans-serif;
@@ -122,6 +147,22 @@ h3 {
   text-align: center;
   line-height: 1.5em; }
 
+h4 {
+  color: #E74C3C;
+  font-size: 2rem;
+  font-weight: 700; }
+
+.destacado {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #E74C3C; }
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1F2933; }
+
 h6 {
   font-size: 0.9rem;
   color: #1F2933;
@@ -129,6 +170,11 @@ h6 {
   line-height: 1.8em;
   font-weight: 400;
   letter-spacing: 1px; }
+
+.link {
+  font-size: 1rem;
+  color: #E74C3C !important;
+  font-weight: 500; }
 
 /*Utilizo esta clase únicamente para textos tipo leyenda. Ej. "Scroll"*/
 small.light {
@@ -145,6 +191,19 @@ FORMULARIOS
   background-color: #4452CF;
   padding: 6vh;
   height: 100vh; }
+
+.form-box {
+  background-color: transparent;
+  padding: 6vh;
+  height: 100vh;
+  display: none; }
+
+.form-box.active {
+  display: flex;
+  opacity: 1; }
+
+.visibility.invisible {
+  diplay: none; }
 
 .card {
   width: 100%;
@@ -164,16 +223,7 @@ FORMULARIOS
 /*
 ************************************************************************************
 FORMULARIO INTRODUCCIÓN
-************************************************************************************
-*/
-.intro-form-section {
-  transition: all 0.3s ease;
-  opacity: 0; }
-
-.intro-form-section.active {
-  visibility: visible;
-  opacity: 1; }
-
+**********************************************************/
 .form-open {
   width: 50%; }
 
@@ -216,6 +266,11 @@ PANTALLAS AUXILIARES
 .auxiliar-text-container {
   padding: 0 25%; }
 
+/*
+************************************************************************************
+VALIDACIÓN FORMULARIOS
+************************************************************************************
+*/
 .btn-intro {
   border: 2px solid #4452CF;
   border-radius: 25px;
@@ -268,6 +323,16 @@ PANTALLAS AUXILIARES
     font-size: 1.8rem; } }
 /* Large devices (laptops/desktops, 992px and up) */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+/*Aside elements*/
+.transport-nav {
+  margin-left: 30px;
+  width: 10vh;
+  height: 100vh;
+  position: fixed; }
+
+.aside-icon {
+  height: 50px; }
+
 .content-intro {
   padding: 2% 6%; }
 
@@ -276,14 +341,11 @@ PANTALLAS AUXILIARES
 INTRO ************************************************************************************
 ******************************************************************************************
 */
-header {
-  background-color: #ECF0F1;
-  height: 100vh; }
-
 #intro {
   height: 85vh;
   position: relative;
-  z-index: -1; }
+  z-index: -1;
+  background-color: #ECF0F1; }
 
 .cloud {
   postion: absolute; }
@@ -303,5 +365,42 @@ header {
 PREGUNTAS ********************************************************************************
 ******************************************************************************************
 */
+/*
+******************************************************************************************
+PÁGINAS DE INFORMACIÓN
+********************************************************************************
+******************************************************************************************
+*/
+.general-info, .grid {
+  margin-left: 25vh;
+  margin-right: 5vh; }
+
+.header-transport {
+  height: 20vh; }
+
+.contenido {
+  padding-top: 3rem;
+  line-height: 2rem; }
+
+.grid-header {
+  width: 100%;
+  height: 5rem;
+  background-color: #F7B23B; }
+
+.item-wrapper {
+  height: 465px;
+  background-color: #4452CF;
+  border-radius: 32px; }
+
+.grid-content {
+  background-color: #fff;
+  height: 60%;
+  width: 100%;
+  border-radius: 32px;
+  padding: 15px; }
+
+.grid-content-header {
+  margin-top: 16px;
+  margin-bottom: 2rem; }
 
 /*# sourceMappingURL=styles.css.map */

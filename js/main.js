@@ -11,7 +11,7 @@ function parallax(element, distance, speed) {
 }
 
 window.addEventListener('scroll', function(){
-    parallax('header', window.scrollY, 1);
+    parallax('header', window.scrollY, 0.5);
     parallax('.cloud', window.scrollY, -0.2);
 
 });
@@ -28,6 +28,8 @@ function smoothScroll(target, duration){
     var startPosition = window.pageYOffset;
     var distance = targetPosition - startPosition;
     var startTime = null;
+
+    console.log(targetPosition);
 
     function animation(currentTime) {
         if(startTime === null) startTime = currentTime;
@@ -54,6 +56,7 @@ cloudTransition.addEventListener('click', function() {
     smoothScroll('.intro-text-container', 1000);
 });
 
+
 // Aquí me gustaría que también se activase el scroll haciendo scroll
 cloudTransition.addEventListener('scroll', function() {
     smoothScroll('.intro-text-container', 1000);
@@ -66,14 +69,62 @@ cloudTransition.addEventListener('scroll', function() {
 //
 //
 
+
 //
 //
 // ENLACES
 //
 //
 
-function gotoDiv() {
-    var introForm = document.getElementById('intro-form');
+//Función para ir a los enlaces y mostrar/ocultar los diferentes Divs
+function gotoDiv(proximoEnlace) {
+    let visibleSection = document.getElementById(proximoEnlace); 
+    let activos = document.querySelector('.active'); 
 
-    introForm.classList.add('active');
+    console.log(activos);
+
+    if (activos != null) {
+        activos.classList.remove('active');
+    }
+
+    visibleSection.classList.add('active');
 }
+
+
+
+//
+//
+// VALIDACIÓN FORMULARIOS
+//
+//
+
+//FORMULARIO DE ENTRADA (INTROFORM)
+
+function introValidate() {
+    let acumErrores = 0;
+
+    let dayCounter = document.forms["introForm"]["dayCount"];
+    let accomAddress = document.forms["introForm"]["accommodationAddress"];
+
+    if (dayCounter.value == "") {
+        //dayCounter.style.border= "1px solid red"
+        dayCounter.classList.add("is-invalid");     
+        acumErrores ++;
+    }
+
+    if (accomAddress.value == "") {
+        //dayCounter.style.border= "1px solid red"
+        accomAddress.classList.add("is-invalid");
+        
+        acumErrores ++;
+    }
+
+   
+
+    if (acumErrores > 0){
+        return false;
+    }else{
+		return true;
+	}
+}
+

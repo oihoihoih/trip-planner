@@ -33,7 +33,12 @@ body {
   font-family: $sans-serif;
   font-weight: $regular;
   color: $dark-color;
+  &.transport {
+    background-color: $light-color;
+  }
 }
+
+
 
 h1, h2 {
   font-family: $sans-serif;
@@ -64,6 +69,25 @@ h3 {
   line-height: 1.5em;
 }
 
+h4 {
+  color: $contrast-color;
+  font-size: 2rem;
+  font-weight: $bold;
+}
+
+.destacado {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: $semi-bold;
+  color: $contrast-color;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: $bold;
+  color: $dark-color;
+}
+
 h6 {
   font-size: 0.9rem;
   color: $dark-color;
@@ -71,6 +95,12 @@ h6 {
   line-height: 1.8em;
   font-weight: $regular;
   letter-spacing: 1px;
+}
+
+.link {
+  font-size: 1rem;
+  color: $contrast-color !important;
+  font-weight: $medium;
 }
 
 /*Utilizo esta clase únicamente para textos tipo leyenda. Ej. "Scroll"*/

@@ -1,8 +1,9 @@
 @import "components/globals";
 @import "components/icons";
-@import "components/forms";
+@import "components/formularios";
 @import "components/buttons";
 @import "components/responsive";
+@import "components/navigation";
 
 .content-intro {
   padding: 2% 6%;
@@ -14,15 +15,13 @@ INTRO **************************************************************************
 ******************************************************************************************
 */
 
-header {
-  background-color: $light-color;
-  height: 100vh;
-}
+
 
 #intro {
     height: 85vh;
     position: relative;
     z-index: -1;
+    background-color: $light-color;
 }
 
 .cloud {
@@ -48,3 +47,52 @@ header {
 PREGUNTAS ********************************************************************************
 ******************************************************************************************
 */
+
+
+
+/*
+******************************************************************************************
+PÁGINAS DE INFORMACIÓN
+********************************************************************************
+******************************************************************************************
+*/
+
+.general-info, .grid {
+  margin-left: 25vh;
+  margin-right: 5vh;
+}
+
+.header-transport {
+  height: 20vh;
+}
+
+.contenido {
+  padding-top: 3rem;
+  line-height: 2rem;
+}
+
+.grid-header {
+  width: 100%;
+  height: 5rem;
+  background-color: $primary-color-complement;
+}
+
+.item-wrapper {
+  height: 465px;
+  background-color: $primary-color;
+  border-radius: 32px;
+}
+
+.grid-content {
+  background-color: #fff;
+  height: 60%;
+  width: 100%;
+  border-radius: 32px;
+  padding: 15px;
+}
+
+.grid-content-header {
+  margin-top: 16px;
+  margin-bottom: 2rem;
+}
+

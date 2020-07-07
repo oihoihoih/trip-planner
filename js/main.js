@@ -128,3 +128,60 @@ function introValidate() {
 	}
 }
 
+function contactValidate() {
+    let acumErrores = 0;
+    let name = document.forms["contactForm"]["name"];
+    let mail = document.forms["contactForm"]["mail"];
+    let subject = document.forms["contactForm"]["subject"];
+    let message = document.forms["contactForm"]["message"];
+    let privacy = document.forms["contactForm"]["privacyCheck"];
+
+    if (name.value == "") {
+        name.classList.add("is-invalid");
+
+        acumErrores ++;
+    }
+
+    if (mail.value == "") {
+        mail.classList.add("is-invalid");
+
+        acumErrores ++;
+    } else if(!validar_email(mail.value)){
+		mail.classList.add("is-invalid");
+ 
+        acumErrores ++;
+	}
+
+    if (subject.value == "") {
+        subject.classList.add("is-invalid");
+
+        acumErrores ++;
+    }
+
+    if (message.value == "") {
+        message.classList.add("is-invalid");
+
+        acumErrores ++;
+    }
+
+    if (!privacy.checked) {
+        privacyCheck.classList.add("is-invalid");
+
+        acumErrores ++;
+    }
+
+
+
+    if (acumErrores > 0){
+        return false;
+    }else{
+		return true;
+	}
+}
+
+// Función para validar el mail
+function validar_email(mail) {
+    var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+	return regex.test(mail) ? true : false;
+}

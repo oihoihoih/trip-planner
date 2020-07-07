@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang=es dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/fonts/elegant-icons.css">-->
+    <link rel="stylesheet" type="text/css" href="css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+
+    <title>Trip planner</title>
+</head>
+
+
+<body>
+ 
+<section id="contact" class="form-box active">
+    <div class="card d-flex flex-column">
+        <div class="d-flex">
+            <a href="" class="ml-auto">
+                <i class="icon-colose-cross ml-auto"></i>
+            </a>
+        </div>
+
+        <form id="contactForm" class="d-flex flex-column align-items-center pt-5" action="" method="post" onsubmit="return contactValidate()" name="contactForm">
+            <h3>Form validation</h3>
+            <!--Nombre-->
+            <div class="form-row w-75 mt-3">
+                <div class="col-md-6 mt-5 pr-3 pl-0">
+                    <label for="name" class="open-label">Nombre</label>
+                    <input type="text" id="name" class="open" name="name" placeholder="Introduce tu nombre">
+                    <div id="nameError" class="invalid-feedback">Este campo es obligatorio</div>
+                </div>
+            <!--Email-->
+                <div class="col-md-6 mt-5 pl-3 pr-0">
+                    <label for="mail" class="open-label">Email</label>
+                    <input type="text" id="mail" class="open" name="mail" placeholder="email@ejemplo.com">
+                    <div id="mailError" class="invalid-feedback">Este campo es obligatorio</div>
+                </div>
+            </div>
+
+            <!--Sujeto-->
+            <div class="form-row w-75">
+                <div class="form-group w-100 mt-3">
+                    <label for="subject" class="open-label">Asunto:</label>
+                    <input type="text" id="subject" class="open" name="subject" placeholder="Introduce el asunto de tu mensaje">
+                    <div id="subjectError" class="invalid-feedback">Este campo es obligatorio</div>
+                </div>
+            </div>
+
+            <!--Mensaje-->
+            <div class="form-row w-75">
+                <div class="form-group w-100 mt-3">
+                    <label for="message" class="open-label">Mensaje:</label>
+                    <textarea type="text" id="message" class="close" name="message" placeholder="Escribe aquí tu mensaje" rows="6"></textarea>
+                    <div id="messageError" class="invalid-feedback">Este campo es obligatorio</div>
+                </div>
+            </div>
+
+            <!--Privacidad y-->
+            <div class="form-row w-75 mt-3">
+
+                <!--Privacidad-->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="privacyCheck">
+                    <label class="form-check-label" for="privacyCheck">
+                      Acepto las políticas de privacidad
+                    </label>
+                    <div id="privacyError" class="invalid-feedback">
+                      Tienes que aceptar las políticas de privacidad antes de enviar el formulario
+                    </div>
+                </div>
+
+                <!--Botón-->
+                <button type="submit" class="btn btn-mine ml-auto w-25">Enviar</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+
+
+    <script src = "js/main.js"></script>
+    <script src = "js/jquery-3.5.1.slim.min.js"></script>
+    <script src = "js/popper.min.js"></script>
+    <script src = "js/bootstrap.min.js"></script>
+</body>
+</html>

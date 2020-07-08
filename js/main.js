@@ -50,17 +50,17 @@ function smoothScroll(target, duration){
 
 }
 
-var cloudTransition = document.querySelector('.cloudTransition');
+// var cloudTransition = document.querySelector('.cloudTransition');
 
-cloudTransition.addEventListener('click', function() {
-    smoothScroll('.intro-text-container', 1000);
-});
+// cloudTransition.addEventListener('click', function() {
+//     smoothScroll('.intro-text-container', 1000);
+// });
 
 
 // Aquí me gustaría que también se activase el scroll haciendo scroll
-cloudTransition.addEventListener('scroll', function() {
-    smoothScroll('.intro-text-container', 1000);
-});
+// cloudTransition.addEventListener('scroll', function() {
+//     smoothScroll('.intro-text-container', 1000);
+// });
 
 
 //
@@ -128,8 +128,13 @@ function introValidate() {
 	}
 }
 
+const form = document.getElementById("contactFormId");
+
 function contactValidate() {
+
     let acumErrores = 0;
+    form.classList.remove("is-invalid");
+
     let name = document.forms["contactForm"]["name"];
     let mail = document.forms["contactForm"]["mail"];
     let subject = document.forms["contactForm"]["subject"];
@@ -179,9 +184,26 @@ function contactValidate() {
 	}
 }
 
+
+// Función para validar en vivo (la que viene con el ejercicio)
+form.addEventListener('blur', (event) => {
+    console.log(event);
+	// if(event.target.value!='') event.target.classList.remove('is-invalid');
+
+    if(event.target.value!="" && event.target.classList.contains("is-invalid")) {
+
+        event.target.classList.remove("is-invalid");
+        contactValidate();
+    }
+
+}, true);
+
+
 // Función para validar el mail
 function validar_email(mail) {
     var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
 	return regex.test(mail) ? true : false;
 }
+
+

@@ -50,12 +50,13 @@ function smoothScroll(target, duration){
 
 }
 
-// var cloudTransition = document.querySelector('.cloudTransition');
+if(document.querySelector(".cloudTransition") ) {
+    var cloudTransition = document.querySelector('.cloudTransition');
 
-// cloudTransition.addEventListener('click', function() {
-//     smoothScroll('.intro-text-container', 1000);
-// });
-
+    cloudTransition.addEventListener('click', function() {
+    smoothScroll('.intro-text-container', 1000);
+});
+}
 
 // Aquí me gustaría que también se activase el scroll haciendo scroll
 // cloudTransition.addEventListener('scroll', function() {
@@ -186,9 +187,11 @@ function contactValidate() {
 
 
 // Función para validar en vivo (la que viene con el ejercicio)
-form.addEventListener('blur', (event) => {
-    console.log(event);
-	// if(event.target.value!='') event.target.classList.remove('is-invalid');
+if (document.getElementById("contactFormId")){
+    form.addEventListener('blur', (event) => {
+        console.log(event);
+        //modo abreviado para poner condicional:
+	    // if(event.target.value!='') event.target.classList.remove('is-invalid');
 
     if(event.target.value!="" && event.target.classList.contains("is-invalid")) {
 
@@ -196,7 +199,20 @@ form.addEventListener('blur', (event) => {
         contactValidate();
     }
 
+    if(event.target.checked) {
+        event.target.classList.remove("is-invalid");
+    }
 }, true);
+
+//Para que se vayan los estilos de error al clickar sobre el checkbox
+form.addEventListener('change', (event) => {
+    console.log(event);
+    if(event.target.checked) {
+        event.target.classList.remove("is-invalid");
+    }
+});
+
+}
 
 
 // Función para validar el mail

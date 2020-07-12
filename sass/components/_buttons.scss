@@ -23,6 +23,12 @@
     background-color: $primary-color;
     color: $light-color;
   }
+  &:not([href]) {
+    color: $primary-color
+  } 
+  &:hover:not([href]) {
+    color: $light-color
+  } 
 }
 
 

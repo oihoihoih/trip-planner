@@ -1,40 +1,64 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    h1 {
-        font-size: 4rem;
-    }
+    // h1 {
+    //     font-size: 4rem;
+    // }
 
     h2 { 
         font-size: 1.5rem;
     }
 } 
 
+.cloud, .sun {
+    width: 30vw;
+  }
+  
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    h1 {
-        font-size: 5rem;
-    }
+    // h1 {
+    //     font-size: 5rem;
+    // }
     h2 { 
         font-size: 1.5rem;
     }
+
+    .cloud, .sun {
+        width: 25vw;
+      }
+      
 } 
 
 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    h1 {
-        font-size: 5rem;
-    }
+    // h1 {
+    //     font-size: 5rem;
+    // }
     h2 { 
         font-size: 1.8rem;
     }
+
+    .cloud, .sun {
+        width: 25vw;
+      }
+      
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {} 
-
+@media only screen and (min-width: 992px) {
+    .cloud, .sun {
+        width: 15vw;
+      }
+    
+} 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+    .cloud, .sun {
+        width: 15vw;
+      }
+    
+}

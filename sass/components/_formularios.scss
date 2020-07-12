@@ -27,9 +27,6 @@ FORMULARIOS
   opacity: 1;
 }
 
-.visibility.invisible {
-  diplay: none;
-}
 
 .card {
   width: 100%;
@@ -67,9 +64,9 @@ FORMULARIOS
 FORMULARIO INTRODUCCIÓN
 **********************************************************/
 
-.form-open {
-  width: 50%;
-}
+// .form-open {
+//   width: 50%;
+// }
 
 .open {
   width: 100%;
@@ -85,7 +82,6 @@ FORMULARIO INTRODUCCIÓN
   }
 
 .optional {
-    margin-right: 25%;
   a {
     color: $contrast-color;
     font-weight: $semi-bold;

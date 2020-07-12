@@ -11,8 +11,10 @@ function parallax(element, distance, speed) {
 }
 
 window.addEventListener('scroll', function(){
-    parallax('header', window.scrollY, 0.5);
     parallax('.cloud', window.scrollY, -0.2);
+    parallax('.sun', window.scrollY, 0.6);
+    parallax('.title-container', window.scrollY, 1);
+    parallax('.cl-two', window.scrollY, 0.6);
 
 });
 
@@ -102,7 +104,9 @@ function gotoDiv(proximoEnlace) {
 //FORMULARIO DE ENTRADA (INTROFORM)
 
 function introValidate() {
+    event.preventDefault(); //preventDefault siempre al principio de los formularios
     let acumErrores = 0;
+
 
     let dayCounter = document.forms["introForm"]["dayCount"];
     let accomAddress = document.forms["introForm"]["accommodationAddress"];
@@ -120,12 +124,17 @@ function introValidate() {
         acumErrores ++;
     }
 
-   
+
+
 
     if (acumErrores > 0){
         return false;
     }else{
-		return true;
+        //Aquí le tengo que dar las instrucciones de lo que quiero hacer una vez validado
+        //Almacenar valores
+        //Opcional mostrar pantalla con "se han recogido bien los datos…"
+        gotoDiv('arrival')
+        return false;
 	}
 }
 

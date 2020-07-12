@@ -25,7 +25,8 @@ $black: 900; /*usado*/
 
 
 
-/* reglas generales */
+/* TIPOGRAFÍA */
+html { font-size: 1rem;}
 
 body {
   background-color: $primary-color;
@@ -38,8 +39,6 @@ body {
   }
 }
 
-
-
 h1, h2 {
   font-family: $sans-serif;
   text-transform: uppercase;
@@ -49,9 +48,11 @@ h1, h2 {
 h1 {
   font-weight: $black;
   color: $primary-color;
-  font-size: 6rem;
+  // fluid typography
+  // https://css-tricks.com/snippets/css/fluid-typography/
+  font-size: calc(3rem + (80 - 40) * ((100vw - 300px) / (1600 - 300)));
   line-height: 1em;
-  //cambiar el font size con lo que me enseñó Albert
+  text-align: center;
 }
 
 h2 {
@@ -64,6 +65,7 @@ h2 {
 h3 {
   color: $primary-color;
   font-size: 2rem;
+  font-size: calc(1.5rem + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
   font-weight: $bold;
   text-align: center;
   line-height: 1.5em;
@@ -108,4 +110,9 @@ small.light {
   text-transform: uppercase;
   color: $light-color;
   letter-spacing: 3px;
+}
+
+
+a:hover {
+  cursor:pointer;
 }

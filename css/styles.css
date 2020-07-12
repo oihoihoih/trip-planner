@@ -5,7 +5,10 @@
 /* weights */
 /*usado*/
 /*usado*/
-/* reglas generales */
+/* TIPOGRAFÍA */
+html {
+  font-size: 1rem; }
+
 body {
   background-color: #4452CF;
   width: 100%;
@@ -23,8 +26,9 @@ h1, h2 {
 h1 {
   font-weight: 900;
   color: #4452CF;
-  font-size: 6rem;
-  line-height: 1em; }
+  font-size: calc(3rem + (80 - 40) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1em;
+  text-align: center; }
 
 h2 {
   color: #ECF0F1;
@@ -35,6 +39,7 @@ h2 {
 h3 {
   color: #4452CF;
   font-size: 2rem;
+  font-size: calc(1.5rem + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 700;
   text-align: center;
   line-height: 1.5em; }
@@ -73,6 +78,9 @@ small.light {
   text-transform: uppercase;
   color: #ECF0F1;
   letter-spacing: 3px; }
+
+a:hover {
+  cursor: pointer; }
 
 @font-face {
   font-family: 'fontello';
@@ -113,7 +121,10 @@ small.light {
 /* weights */
 /*usado*/
 /*usado*/
-/* reglas generales */
+/* TIPOGRAFÍA */
+html {
+  font-size: 1rem; }
+
 body {
   background-color: #4452CF;
   width: 100%;
@@ -131,8 +142,9 @@ h1, h2 {
 h1 {
   font-weight: 900;
   color: #4452CF;
-  font-size: 6rem;
-  line-height: 1em; }
+  font-size: calc(3rem + (80 - 40) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1em;
+  text-align: center; }
 
 h2 {
   color: #ECF0F1;
@@ -143,6 +155,7 @@ h2 {
 h3 {
   color: #4452CF;
   font-size: 2rem;
+  font-size: calc(1.5rem + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 700;
   text-align: center;
   line-height: 1.5em; }
@@ -182,6 +195,9 @@ small.light {
   color: #ECF0F1;
   letter-spacing: 3px; }
 
+a:hover {
+  cursor: pointer; }
+
 /*
 ************************************************************************************
 FORMULARIOS
@@ -201,9 +217,6 @@ FORMULARIOS
 .form-box.active {
   display: flex;
   opacity: 1; }
-
-.visibility.invisible {
-  diplay: none; }
 
 .card {
   width: 100%;
@@ -235,9 +248,6 @@ FORMULARIOS
 ************************************************************************************
 FORMULARIO INTRODUCCIÓN
 **********************************************************/
-.form-open {
-  width: 50%; }
-
 .open {
   width: 100%;
   outline: 0;
@@ -249,11 +259,9 @@ FORMULARIO INTRODUCCIÓN
   color: #4452CF;
   text-transform: uppercase; }
 
-.optional {
-  margin-right: 25%; }
-  .optional a {
-    color: #E74C3C;
-    font-weight: 600; }
+.optional a {
+  color: #E74C3C;
+  font-weight: 600; }
 
 /*
 FORMULARIO CON OPCIONES PARA ELEGIR
@@ -304,6 +312,10 @@ VALIDACIÓN FORMULARIOS
   .btn-mine:hover {
     background-color: #4452CF;
     color: #ECF0F1; }
+  .btn-mine:not([href]) {
+    color: #4452CF; }
+  .btn-mine:hover:not([href]) {
+    color: #ECF0F1; }
 
 .button-icon {
   color: #4452CF;
@@ -311,32 +323,8 @@ VALIDACIÓN FORMULARIOS
   .button-icon:hover {
     color: #ECF0F1; }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 4rem; }
-
-  h2 {
-    font-size: 1.5rem; } }
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  h1 {
-    font-size: 5rem; }
-
-  h2 {
-    font-size: 1.5rem; } }
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 5rem; }
-
-  h2 {
-    font-size: 1.8rem; } }
-/* Large devices (laptops/desktops, 992px and up) */
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 /*Aside elements*/
 .transport-nav {
-  margin-left: 30px;
   width: 10vh;
   height: 100vh;
   position: fixed; }
@@ -344,6 +332,38 @@ VALIDACIÓN FORMULARIOS
 .aside-icon {
   height: 50px; }
 
+.cloud, .sun {
+  width: 15vw; }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem; } }
+.cloud, .sun {
+  width: 30vw; }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  h2 {
+    font-size: 1.5rem; }
+
+  .cloud, .sun {
+    width: 25vw; } }
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 1.8rem; }
+
+  .cloud, .sun {
+    width: 25vw; } }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .cloud, .sun {
+    width: 15vw; } }
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .cloud, .sun {
+    width: 15vw; } }
 .content-intro {
   padding: 2% 6%; }
 
@@ -353,20 +373,17 @@ INTRO **************************************************************************
 ******************************************************************************************
 */
 #intro {
-  height: 85vh;
+  height: 100vh;
   position: relative;
   z-index: -1;
   background-color: #ECF0F1; }
 
-.cloud {
-  postion: absolute; }
-
 #intro-illustration {
   background-image: url("../imgs/cloud-transition.svg");
-  background-color: #ECF0F1;
   background-size: cover;
   height: auto;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  top: -150px; }
 
 .intro-text-container {
   height: 90vh; }

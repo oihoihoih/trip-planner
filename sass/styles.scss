@@ -2,8 +2,10 @@
 @import "components/icons";
 @import "components/formularios";
 @import "components/buttons";
-@import "components/responsive";
 @import "components/navigation";
+@import "components/images";
+@import "components/responsive";
+
 
 .content-intro {
   padding: 2% 6%;
@@ -18,22 +20,19 @@ INTRO **************************************************************************
 
 
 #intro {
-    height: 85vh;
+    height: 100vh;
     position: relative;
     z-index: -1;
     background-color: $light-color;
 }
 
-.cloud {
-  postion: absolute;
-
-}
 #intro-illustration {
   background-image: url('../imgs/cloud-transition.svg');
-  background-color: $light-color;
+  // background-color: $light-color;
   background-size: cover;
   height: auto;
   background-repeat: no-repeat;
+  top: -150px;
 }
 
 

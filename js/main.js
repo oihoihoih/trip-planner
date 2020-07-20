@@ -54,10 +54,11 @@ function smoothScroll(target, duration){
 
 if(document.querySelector(".cloudTransition") ) {
     var cloudTransition = document.querySelector('.cloudTransition');
+    // var mouse = document.getElementById("mouse");
 
     cloudTransition.addEventListener('click', function() {
-    smoothScroll('.intro-text-container', 1000);
-});
+        smoothScroll('.intro-text-container', 1000);
+    });
 }
 
 // Aquí me gustaría que también se activase el scroll haciendo scroll
@@ -112,15 +113,12 @@ function introValidate() {
     let accomAddress = document.forms["introForm"]["accommodationAddress"];
 
     if (dayCounter.value == "") {
-        //dayCounter.style.border= "1px solid red"
         dayCounter.classList.add("is-invalid");     
         acumErrores ++;
     }
 
     if (accomAddress.value == "") {
-        //dayCounter.style.border= "1px solid red"
         accomAddress.classList.add("is-invalid");
-        
         acumErrores ++;
     }
 
@@ -129,8 +127,10 @@ function introValidate() {
 
     if (acumErrores > 0){
         return false;
-    }else{
+    } else {
         //Aquí le tengo que dar las instrucciones de lo que quiero hacer una vez validado
+        console.log(dayCounter.value);
+        console.log(accomAddress.value);
         //Almacenar valores
         //Opcional mostrar pantalla con "se han recogido bien los datos…"
         gotoDiv('arrival')

@@ -82,12 +82,12 @@
 
 <!--Antes de empezar dinos algo sobre ti-->
 <section id="intro-form-section" class="form-box">
-    <div id="intro-form" class="card intro-form-section card-intro-form d-flex flex-column">
+    <div id="intro-form" class="card d-flex flex-column">
 
         <!--Icono para cerrar la tarjeta-->
         <div class="d-flex">
             <a href="" class="ml-auto">
-                <i class="icon-close-cross ml-auto"></i>
+                <i class="icon-close-cross"></i>
             </a>
         </div>
 
@@ -176,39 +176,41 @@
         <!-- Icono X. Al apretar vamos a la pantalla principal de nuevo -->
         <div class="d-flex">
             <a href="" class="ml-auto">
-                <i class="icon-close-cross ml-auto"></i>
+                <i class="icon-close-cross"></i>
             </a>
         </div>
+
         <!-- formulario cómo llegas a Barcelona? -->
-        <form id= "arrival-form" class="d-flex flex-column align-items-center mt-5 pt-md-5" >
-            <!--Pregunta e información general-->
-            <fieldset class="form-header">
+        <div class="d-flex flex-column h-100 justify-content-center mb-md-5">
+
+            <form id= "arrival-form" class="d-flex flex-column align-items-center">
+
+                <!--Pregunta e información general-->
+                <div class="form-header mb-4">
                 <h3>¿Cómo llegas a Barcelona?</h3>
                 <p class="form-info">Selecciona una de las siguientes opciones</p>
-            </fieldset>
+                </div>
 
-            <!--Cambio de estilo en formulario. Estilo elige una opción -->
-            <div class="choose-form row w-100 mx-auto d-flex justify-content-between m-3 m-md-5">
-                <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('que-terminal')">
-                    <i class="icon-flight button-icon"></i> avión </a>
-                <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('que-estacion')">
-                    <i class="icon-train button-icon"></i>tren </a>
-                <a class="btn btn-mine col-md m-2" role="button">
-                    <i class="icon-cab button-icon"></i>coche </a>
-                <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('que-estacion-bus')">
-                    <i class="icon-bus button-icon"></i>bus </a>
-                <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('barco-coche')">
-                    <i class="icon-ship button-icon"></i>barco </a>
-                <a href=""  class="btn btn-mine col-md m-2" role="button">no lo sé </a>
-            </div>
-        </form>
+                <!--Cambio de estilo en formulario. Estilo elige una opción -->
+                <div class="row w-75 mx-auto d-flex justify-content-between">
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('que-terminal')">
+                        <i class="icon-flight button-icon"></i> avión </a>
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('que-estacion')">
+                        <i class="icon-train button-icon"></i>tren </a>
+                    <a class="btn btn-mine col-md m-2" role="button">
+                        <i class="icon-cab button-icon"></i>coche </a>
+                </div>
 
-        <!-- <div class="d-flex">
-            <a href="#chooseTransport" class="ml-auto">
-                <i class="icon-arrow-right-conf"></i>
-            </a>
-        </div> -->
+                <div class="row w-75 mx-auto d-flex justify-content-between">
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('que-estacion-bus')">
+                        <i class="icon-bus button-icon"></i>bus </a>
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('barco-coche')">
+                        <i class="icon-ship button-icon"></i>barco </a>
+                    <a href=""  class="btn btn-mine col-md m-2" role="button">no lo sé </a>
+                </div>
 
+            </form>
+        </div>
     </div>
 </section>
 
@@ -217,13 +219,13 @@
 <!-- Llegas en avión. A qué terminal llegas?-->
 <section id="que-terminal" class="form-box">
     
-    <div class="card d-flex flex-column justify-content-between">
+    <div class="card d-flex flex-column">
 
         <!-- Breadcrumbs con opciones elegidas -->
-        <div class=" row card-row">
+        <div class="row m-0">
             <div class="card-breadcr row d-none d-md-flex mr-auto pl-5 align-items-center">
                 <!--Llegada en avión-->
-                <a onClick="gotoDiv('arrival')"class="d-flex flex-row">
+                <a  class="d-flex flex-row">
                     <i class="icon-flight"> </i>
                     <h6>Llegas en #mediodetransporte</h6>
                 </a>
@@ -231,47 +233,44 @@
 
             <!-- Icono X. Al apretar vamos a la pantalla principal de nuevo -->
             <div class="d-flex ml-auto">
-                <a href="" class="pr-3">
-                    <i class="icon-close-cross ml-auto"></i>
+                <a href="#arrival" onClick="gotoDiv('arrival')">
+                    <i class="icon-close-cross"></i>
                 </a>
             </div>
                    
         </div>
 
         <!-- formulario ¿A qué terminal llegas? -->
-        <form id= "" class="d-flex flex-column align-items-center mt-5 mt-md-0 pt-md-5">
-            <!--Pregunta e información general-->
-            <fieldset class="form-header">
+        <div class="d-flex flex-column h-100 justify-content-center mb-md-5">
+            <form id= "" class="d-flex flex-column align-items-center">
+            
+                <!--Pregunta e información general-->
+                <div class="form-header mb-4">
                 <h3>¿A qué terminal llegas?</h3>
                 <p class="form-info">Selecciona una de las siguientes opciones</p>
-            </fieldset>
+                </div>
 
-            <!--Cambio de estilo en formulario. Estilo elige una opción -->
-            <div class="choose-form col-md-6 w-100 mx-auto d-flex m-5">
-                <!-- Tengo que añadir iconos en los botones -->
-                <a class="btn btn-mine col m-3" role="button" onClick="gotoDiv('chooseTransport')">T1 </a>
-                <a class="btn btn-mine col m-3" role="button" onClick="gotoDiv('chooseTransport')">T2 </a>
-            </div>
-        </form>
+                <!--Cambio de estilo en formulario. Estilo elige una opción -->
+                <div class="row w-75 mx-auto d-flex justify-content-between">
+                    <!-- Tengo que añadir iconos en los botones -->
+                    <a class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('chooseTransport')">T1 </a>
 
-        <div class="row card-row mb-3">
-            <div class="d-flex">
-                <a href="#arrival" class="mr-auto pl-4" onClick="gotoDiv('arrival')">
-                    <i class="icon-arrow-left-conf"></i>
-                </a>
-            </div>
+                    <a class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('chooseTransport')">T2 </a>
+                </div>
+            </form>
         </div>
 
     </div>
 </section>
+
 
 <!--Llegas en tren. A Qué estación llegas?-->
 <section id="que-estacion" class="form-box">
     
-    <div class="card d-flex flex-column justify-content-between">
+    <div class="card d-flex flex-column">
 
         <!-- Breadcrumbs con opciones elegidas -->
-        <div class=" row card-row">
+        <div class=" row m-0">
             <div class="card-breadcr row d-none d-md-flex mr-auto pl-5 align-items-center">
                 <!--Llegada en avión-->
                 <a onClick="gotoDiv('arrival')"class="d-flex flex-row">
@@ -282,52 +281,52 @@
 
             <!-- Icono X. Al apretar vamos a la pantalla principal de nuevo -->
             <div class="d-flex ml-auto">
-                <a href="" class="pr-3">
-                    <i class="icon-close-cross ml-auto"></i>
+                <a href="#arrival" onClick="gotoDiv('arrival')">
+                    <i class="icon-close-cross"></i>
                 </a>
             </div>
                    
         </div>
 
         <!-- formulario ¿A qué estación llegas? -->
-        <form id= "" class="d-flex flex-column align-items-center mt-5 mt-md-0 pt-md-5">
+        <div class="d-flex flex-column h-100 justify-content-center mb-md-5">
+            <form id= "" class="d-flex flex-column align-items-center">
             <!--Pregunta e información general-->
-            <fieldset class="form-header">
+                <div class="form-header mb-4">
                 <h3>¿A qué estación llegas?</h3>
                 <p class="form-info">Selecciona una de las siguientes opciones</p>
-            </fieldset>
+                </div>
 
-            <!--Cambio de estilo en formulario. Estilo elige una opción -->
-            <div class="choose-form col-md-12 w-100 mx-auto d-flex m-5">
-                <!-- Tengo que añadir iconos en los botones -->
-                <a class="btn btn-mine col m-3" role="button" onClick="gotoDiv('chooseTransport')">Estación de Sants</a>
-                <a class="btn btn-mine col m-3" role="button" onClick="gotoDiv('chooseTransport')">Estación de Francia </a>
-                <a class="btn btn-mine col m-3" role="button" onClick="gotoDiv('chooseTransport')">Pza Catalunya </a>
-                <a class="btn btn-mine col m-3" role="button" onClick="gotoDiv('chooseTransport')">La Sagrera </a>
-            </div>
-        </form>
+                <!--Cambio de estilo en formulario. Estilo elige una opción -->
+                <div class="row w-75 mx-auto d-flex justify-content-between">
 
-        <div class="row card-row mb-3">
-            <div class="d-flex">
-                <a href="#arrival" class="mr-auto pl-4" onClick="gotoDiv('arrival')">
-                    <i class="icon-arrow-left-conf"></i>
-                </a>
-            </div>
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('chooseTransport')">Estación de Sants</a>
+
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('chooseTransport')">Estación de Francia </a>
+
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('chooseTransport')">Pza Catalunya </a>
+
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('chooseTransport')">La Sagrera </a>
+
+                </div>
+            </form>
         </div>
 
     </div>
 </section>
+
 
 <!--Llegas en coche. 
 Se abrirá en página nueva con explicación de aparcamientos etc. 
 
+
 <!--Llegas en autobús. A Qué estación llegas?-->
 <section id="que-estacion-bus" class="form-box">
     
-    <div class="card d-flex flex-column justify-content-between">
+    <div class="card d-flex flex-column">
 
         <!-- Breadcrumbs con opciones elegidas -->
-        <div class=" row card-row">
+        <div class=" row m-0">
             <div class="card-breadcr row d-none d-md-flex mr-auto pl-5 align-items-center">
                 <!--Llegada en avión-->
                 <a onClick="gotoDiv('arrival')"class="d-flex flex-row">
@@ -338,47 +337,43 @@ Se abrirá en página nueva con explicación de aparcamientos etc.
 
             <!-- Icono X. Al apretar vamos a la pantalla principal de nuevo -->
             <div class="d-flex ml-auto">
-                <a href="" class="pr-3">
-                    <i class="icon-close-cross ml-auto"></i>
+                <a href="#arrival" onClick="gotoDiv('arrival')">
+                    <i class="icon-close-cross"></i>
                 </a>
             </div>
                    
         </div>
 
         <!-- formulario ¿A qué estación llegas? -->
-        <form id= "" class="d-flex flex-column align-items-center mt-5 mt-md-0 pt-md-5">
-            <!--Pregunta e información general-->
-            <fieldset class="form-header">
-                <h3>¿A qué estación llegas?</h3>
-                <p class="form-info">Selecciona una de las siguientes opciones</p>
-            </fieldset>
+        <div class="d-flex flex-column h-100 justify-content-center mb-md-5">
+            <form id= "" class="d-flex flex-column align-items-center">
+                <!--Pregunta e información general-->
+                <div class="form-header mb-4">
+                    <h3>¿A qué estación llegas?</h3>
+                    <p class="form-info">Selecciona una de las siguientes opciones</p>
+                </div>
 
-            <!--Cambio de estilo en formulario. Estilo elige una opción -->
-            <div class="choose-form col-md-6 w-100 mx-auto d-flex m-5">
-                <!-- Tengo que añadir iconos en los botones -->
-                <a class="btn btn-mine col m-3" role="button" onClick="gotoDiv('chooseTransport')">Estación de Sants</a>
-                <a class="btn btn-mine col m-3" role="button" onClick="gotoDiv('chooseTransport')">Estación del Norte </a>
-            </div>
-        </form>
-
-        <div class="row card-row mb-3">
-            <div class="d-flex">
-                <a href="#arrival" class="mr-auto pl-4" onClick="gotoDiv('arrival')">
-                    <i class="icon-arrow-left-conf"></i>
-                </a>
-            </div>
+                <!--Cambio de estilo en formulario. Estilo elige una opción -->
+                <div class="row w-75 mx-auto d-flex justify-content-between">
+ 
+                    <a class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('chooseTransport')">Estación de Sants</a>
+                
+                    <a class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('chooseTransport')">Estación del Norte </a>
+                </div>
+            </form>
         </div>
 
     </div>
 </section>
 
+
 <!--Llegas en barco. Has traído tu propio coche?-->
 <section id="barco-coche" class="form-box">
     
-    <div class="card d-flex flex-column justify-content-between">
+    <div class="card d-flex flex-column">
 
         <!-- Breadcrumbs con opciones elegidas -->
-        <div class=" row card-row">
+        <div class="row m-0">
             <div class="card-breadcr row d-none d-md-flex mr-auto pl-5 align-items-center">
                 <!--Llegada en avión-->
                 <a onClick="gotoDiv('arrival')"class="d-flex flex-row">
@@ -389,35 +384,31 @@ Se abrirá en página nueva con explicación de aparcamientos etc.
 
             <!-- Icono X. Al apretar vamos a la pantalla principal de nuevo -->
             <div class="d-flex ml-auto">
-                <a href="" class="pr-3">
-                    <i class="icon-close-cross ml-auto"></i>
+                <a href="#arrival" onClick="gotoDiv('arrival')">
+                    <i class="icon-close-cross"></i>
                 </a>
             </div>
                    
         </div>
 
-        <!-- formulario ¿A qué estación llegas? -->
-        <form id= "" class="d-flex flex-column align-items-center mt-5 mt-md-0 pt-md-5">
-            <!--Pregunta e información general-->
-            <fieldset class="form-header">
+        <!-- Barco. Has traído tu propio coche? -->
+        <div class="d-flex flex-column h-100 justify-content-center mb-md-5">
+            <form id= "" class="d-flex flex-column align-items-center">
+            
+                <!--Pregunta e información general-->
+                <div class="form-header mb-4">
                 <h3>¿Has traído tu propio coche?</h3>
                 <p class="form-info">Selecciona una de las siguientes opciones</p>
-            </fieldset>
+                </div>
 
-            <!--Cambio de estilo en formulario. Estilo elige una opción -->
-            <div class="choose-form col-md-6 w-100 mx-auto d-flex m-5">
-                <!-- Tengo que añadir iconos en los botones -->
-                <a class="btn btn-mine col m-3" role="button" onClick="gotoDiv('chooseTransport')">sí</a>
-                <a class="btn btn-mine col m-3" role="button" onClick="gotoDiv('chooseTransport')">no</a>
-            </div>
-        </form>
+                <!--Cambio de estilo en formulario. Estilo elige una opción -->
+                <div class="row w-75 mx-auto d-flex justify-content-between">
 
-        <div class="row card-row mb-3">
-            <div class="d-flex">
-                <a href="#arrival" class="mr-auto pl-4" onClick="gotoDiv('arrival')">
-                    <i class="icon-arrow-left-conf"></i>
-                </a>
-            </div>
+                    <a class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('chooseTransport')">sí</a>
+                
+                    <a class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('chooseTransport')">no</a>
+                </div>
+            </form>
         </div>
 
     </div>
@@ -427,7 +418,7 @@ Se abrirá en página nueva con explicación de aparcamientos etc.
 <!-- FASE 3 >>> Cómo quieres ir a tu alojamiento?-->
 <section id="chooseTransport" class="form-box">
     <div class="card d-flex flex-column justify-content-between">
-        <div class="row card-row">
+        <div class="row m-0">
 
             <!-- Breadcrumbs con opciones elegidas -->
             <div class="d-none d-md-flex row card-breadcr mr-auto pl-5 align-items-center">
@@ -448,38 +439,31 @@ Se abrirá en página nueva con explicación de aparcamientos etc.
 
             <!-- Icono X. Al apretar vamos a la pregunta anterior (a qué terminal llegas) -->
             <div class="d-flex ml-auto">
-                <a href="" class="pr-3">
+                <a href="" onClick="gotoDiv('arrival')">
                 <i class="icon-close-cross"></i>
                 </a>
             </div>
         </div>
 
         <!-- formulario ¿Cómo quieres ir a tu alojamiento? -->
-        <form id= "" class="d-flex flex-column align-items-center pt-5">
+        <div class="d-flex flex-column h-100 justify-content-center mb-md-5">
+            <form id= "" class="d-flex flex-column align-items-center">
             <!--Pregunta e información general-->
-            <fieldset class="form-header">
+            <div class="form-header mb-4">
                 <h3>¿Cómo quieres ir a tu alojamiento?</h3>
                 <p class="form-info">Selecciona una de las siguientes opciones</p>
-            </fieldset>
+            </div>
 
             <!--Estilo formulario elige una opción -->
-            <div class="choose-form row w-100 mx-auto d-flex justify-content-around m-5">
-                <a href="#fastOption" class="btn btn-mine col-md-3 m-3" role="button" onClick="gotoDiv('fastOption')">
+            <div class="row w-75 mx-auto d-flex justify-content-between">
+                <a href="#fastOption" class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('fastOption')">
                     <i class="icon-fast button-icon mr-3" role="button"></i>rápido </a>
-                <a href="" class="btn btn-mine col-md-3 m-3">
+                <a href="" class="btn btn-mine col-md m-2">
                     <i class="icon-money button-icon" role="button"></i>económico </a>
-                <a href=""  class="btn btn-mine col-md-3 m-3">
+                <a href=""  class="btn btn-mine col-md m-2">
                     <i class="icon-cab button-icon" role="button"></i>en coche </a>
             </div>
-        </form>
-
-        <!-- Flecha para ir atrás -->
-        <div class="row card-row mb-3">
-            <div class="d-flex">
-                <a href="#que-terminal" class="mr-auto pl-4" role="button" onClick="gotoDiv('que-terminal')">
-                    <i class="icon-arrow-left-conf"></i>
-                </a>
-            </div>
+            </form>
         </div>
 
     </div>
@@ -488,9 +472,9 @@ Se abrirá en página nueva con explicación de aparcamientos etc.
 
 
 <!-- Opción rápido -->
-<section id="fastOption" class="form-box">
+<section id="fastOption" class="form-box"> 
     <div class="card d-flex flex-column justify-content-between">
-        <div class="row">
+        <div class="row m-0">
 
             <!-- Breadcrumbs con opciones elegidas -->
             <div class=" d-none d-md-flex row card-breadcr mr-auto pl-5 align-items-center">
@@ -519,40 +503,34 @@ Se abrirá en página nueva con explicación de aparcamientos etc.
             </div>
 
             <!-- Icono X. Al apretar vamos a la pregunta anterior (a qué terminal llegas) -->
-            <div class="d-flex">
-                <a href="" class="ml-auto pr-3">
-                <i class="icon-close-cross ml-auto"></i>
+            <div class="d-flex ml-auto">
+                <a href="" onClick="">
+                    <i class="icon-close-cross ml-auto"></i>
                 </a>
             </div>
         </div>
 
         <!-- formulario ¿Cómo quieres ir a tu alojamiento? -->
-        <form id= "" class="d-flex flex-column align-items-center pt-5">
-            <!--Pregunta e información general-->
-            <fieldset class="form-header">
+        <div class="d-flex flex-column h-100 justify-content-center mb-md-5">
+            <form id= "" class="d-flex flex-column align-items-center">
+
+                <!--Pregunta e información general-->
+                <div class="form-header mb-4">
                 <h3>Quieres ir rápido. ¿Qué opción te apetece más?</h3>
                 <p class="form-info">Selecciona una de las siguientes opciones</p>
-            </fieldset>
+                </div>
 
-            <!--Estilo formulario elige una opción -->
-            <div class="choose-form row w-100 mx-auto d-flex justify-content-around m-5">
+                <!--Estilo formulario elige una opción -->
+                <div class="row w-75 mx-auto d-flex justify-content-between">
                 <!-- Tengo que añadir iconos en los botones -->
-                <a href="taxis.html" class="btn btn-mine col-md-3 m-3" role="button">
+                <a href="taxis.html" class="btn btn-mine col-md m-2" role="button">
                     <i class="icon-taxi button-icon"></i>taxi </a>
-                <a href="" class="btn btn-mine col-md-3 m-3" role="button">
+                <a href="" class="btn btn-mine col-md m-2" role="button">
                     <i class="icon-bus button-icon"></i>aerobús </a>
-                <a href=""  class="btn btn-mine col-md-3 m-3" role="buttons">
+                <a href=""  class="btn btn-mine col-md m-2" role="buttons">
                     <i class="icon-cab button-icon"></i>traslado privado </a>
-            </div>
-        </form>
-
-        <!-- Flecha para ir atrás -->
-        <div class="row card-row mb-3">
-            <div class="d-flex">
-                <a href="#chooseTransport" class="mr-auto pl-4">
-                <i class="icon-arrow-left-conf"></i>
-                </a>
-            </div>
+                </div>
+            </form>
         </div>
 
     </div>

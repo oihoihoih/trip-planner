@@ -225,12 +225,8 @@ FORMULARIOS
   background-color: #ECF0F1;
   border-radius: 2em; }
 
-.card-row {
-  height: 50px; }
-
 .form-info {
   color: #4452CF;
-  padding-top: 1.5rem;
   text-align: center; }
 
 .close {
@@ -364,6 +360,15 @@ VALIDACIÓN FORMULARIOS
 @media only screen and (min-width: 1200px) {
   .cloud, .sun {
     width: 15vw; } }
+/* FORMULARIOS */
+#intro-form-section, #arrival {
+  animation: fadein 1.5s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .content-intro {
   padding: 2% 6%; }
 

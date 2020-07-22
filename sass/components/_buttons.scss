@@ -23,6 +23,9 @@
     background-color: $primary-color;
     color: $light-color;
   }
+  &:hover i {
+    color: white;
+  }
   &:not([href]) {
     color: $primary-color
   } 

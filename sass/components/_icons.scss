@@ -20,10 +20,6 @@
 
   }
 
-
-.nav-icon {
-  padding-bottom: 2rem;
-}
 .icon-close-cross {
   font-family: 'fontello';
   font-style: normal;
@@ -41,4 +37,9 @@
 .icon-flight, .icon-location {
   color: $dark-color;
   margin-right: 8px;
+}
+
+.bread-icon {
+  color: $light-color;
+  
 }

@@ -96,9 +96,6 @@ a:hover {
   color: #ECF0F1;
   padding-top: 2rem; }
 
-.nav-icon {
-  padding-bottom: 2rem; }
-
 .icon-close-cross {
   font-family: 'fontello';
   font-style: normal;
@@ -114,6 +111,9 @@ a:hover {
 .icon-flight, .icon-location {
   color: #1F2933;
   margin-right: 8px; }
+
+.bread-icon {
+  color: #ECF0F1; }
 
 /*colores*/
 /* tipografía */
@@ -210,7 +210,7 @@ FORMULARIOS
 
 .form-box {
   background-color: transparent;
-  padding: 6vh;
+  padding: 10vh 14vw;
   height: 100vh;
   display: none; }
 
@@ -308,6 +308,8 @@ VALIDACIÓN FORMULARIOS
   .btn-mine:hover {
     background-color: #4452CF;
     color: #ECF0F1; }
+  .btn-mine:hover i {
+    color: white; }
   .btn-mine:not([href]) {
     color: #4452CF; }
   .btn-mine:hover:not([href]) {
@@ -327,6 +329,37 @@ VALIDACIÓN FORMULARIOS
 
 .aside-icon {
   height: 50px; }
+
+#questionBreadcrumb {
+  width: 8vw;
+  height: 100vh;
+  z-index: 999999;
+  top: 0;
+  position: fixed;
+  padding: 10vh 0;
+  display: none;
+  color: #ECF0F1; }
+
+.bread-items {
+  font-size: 1.6rem;
+  margin: 3rem 0;
+  text-align: center; }
+
+.line::before {
+  content: "";
+  background-color: #ECF0F1;
+  width: 1px;
+  height: 40px;
+  position: relative;
+  margin-top: 15px;
+  top: -60px;
+  left: 14px; }
+
+#firstTransport_br, #whichTerminal_br, #whichStation_br, #whichBusStation_br, #howPort_br, #method_br {
+  display: none; }
+
+.breadul {
+  list-style-type: none; }
 
 .cloud, .sun {
   width: 15vw; }

@@ -191,18 +191,18 @@
 
                 <!--Cambio de estilo en formulario. Estilo elige una opción -->
                 <div class="row w-75 mx-auto d-flex justify-content-between">
-                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('que-terminal')">
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('que-terminal', 'avion')">
                         <i class="icon-flight button-icon"></i> avión </a>
-                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('que-estacion')">
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('que-estacion', 'tren')">
                         <i class="icon-train button-icon"></i>tren </a>
                     <a class="btn btn-mine col-md m-2" role="button">
                         <i class="icon-cab button-icon"></i>coche </a>
                 </div>
 
                 <div class="row w-75 mx-auto d-flex justify-content-between">
-                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('que-estacion-bus')">
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('que-estacion-bus', 'autobús')">
                         <i class="icon-bus button-icon"></i>bus </a>
-                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('barco-coche')">
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('barco-coche', 'barco')">
                         <i class="icon-ship button-icon"></i>barco </a>
                     <a href=""  class="btn btn-mine col-md m-2" role="button">no lo sé </a>
                 </div>
@@ -215,13 +215,11 @@
 
 <!-- FASE 2 >>> LLEGAS EN…-->
 <aside id="questionBreadcrumb" class="vbreadcrumb">
-    <ul class="breadul p-0">
-        <li id="firstTransport_br" class="bread-items ml-3"></li>
-        <li id="whichTerminal_br" class="bread-items line ml-3"></li>
-        <li id="whichStation_br" class="bread-items line ml-3"></li>
-        <li id="whichBusStation_br" class="bread-items line ml-3"></li>
-        <li id="howPort_br" class="bread-items line ml-3"></li>
-        <li id="method_br" class="bread-items line ml-2"></li>
+    <ul id="breadul" class="breadul p-0">
+        <li id="arrivalList1" class="bread-items line ml-3" onClick="gotoDiv('arrival')"></li>
+        <li id="arrivalList2" class="bread-items line ml-3" onClick="gotoDiv(proximoEnlace)"></li>
+        <li id="arrivalList3" class="bread-items line ml-3" onClick="gotoDiv(proximoEnlace)"></li>
+        <li id="arrivalList4" class="bread-items line ml-3" onClick="gotoDiv(proximoEnlace)"></li>
     </ul>
 </aside>
 
@@ -254,9 +252,9 @@
                 <!--Cambio de estilo en formulario. Estilo elige una opción -->
                 <div class="row w-75 mx-auto d-flex justify-content-between">
                     <!-- Tengo que añadir iconos en los botones -->
-                    <a id="T1" class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('choosenTransport', T1)">T1 </a>
+                    <a class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('choosenTransport', 'T1')">T1 </a>
 
-                    <a id="T2" class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('choosenTransport', T2);">T2 </a>
+                    <a class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('choosenTransport', 'T2')">T2 </a>
                 </div>
             </form>
         </div>
@@ -292,13 +290,13 @@
                 <!--Cambio de estilo en formulario. Estilo elige una opción -->
                 <div class="row w-75 mx-auto d-flex justify-content-between">
 
-                    <a id="Sants" class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('choosenTransport', Sants)">Estación de Sants</a>
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('choosenTransport', 'Sants Estació')">Estación de Sants</a>
 
-                    <a id="Francia" class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('choosenTransport', Francia)">Estación de Francia </a>
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('choosenTransport', 'Estación de Francia')">Estación de Francia </a>
 
-                    <a id="Catalunya" class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('choosenTransport', Catalunya)">Pza Catalunya </a>
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('choosenTransport', 'Estación de Plaza Catalunya')">Pza Catalunya </a>
 
-                    <a id="Sagrera" class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('choosenTransport', Sagrera)">La Sagrera </a>
+                    <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('choosenTransport', 'Estación de la Sagrera')">La Sagrera </a>
 
                 </div>
             </form>
@@ -339,9 +337,9 @@ Se abrirá en página nueva con explicación de aparcamientos etc.
                 <!--Cambio de estilo en formulario. Estilo elige una opción -->
                 <div class="row w-75 mx-auto d-flex justify-content-between">
  
-                    <a id="SantsBus" class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('choosenTransport', SantsBus)">Estación de Sants</a>
+                    <a lass="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('choosenTransport', 'Estació de Sants')">Estación de Sants</a>
                 
-                    <a id="NorteBus" class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('choosenTransport', NorteBus)">Estación del Norte </a>
+                    <a class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('choosenTransport', 'Estación del Norte')">Estación del Norte </a>
                 </div>
             </form>
         </div>
@@ -380,7 +378,7 @@ Se abrirá en página nueva con explicación de aparcamientos etc.
 
                     <a class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="">sí</a>
                 
-                    <a id="noCar" class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('choosenTransport', noCar)">no</a>
+                    <a class="btn btn-mine col-md m-2 mx-lg-4" role="button" onClick="gotoDiv('choosenTransport', 'sinCoche')">no</a>
                 </div>
             </form>
         </div>
@@ -413,11 +411,11 @@ Se abrirá en página nueva con explicación de aparcamientos etc.
 
             <!--Estilo formulario elige una opción -->
             <div class="row w-75 mx-auto d-flex justify-content-between">
-                <a id="fastChoice" class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('fastOption', fastChoice)">
+                <a class="btn btn-mine col-md m-2" role="button" onClick="gotoDiv('fastOption', 'rápido')">
                     <i class="icon-fast button-icon mr-3"></i>rápido </a>
-                <a id="economicChoice" class="btn btn-mine col-md m-2" role="button" onClick="">
+                <a class="btn btn-mine col-md m-2" role="button" onClick="">
                     <i class="icon-money button-icon"></i>económico </a>
-                <a id="byCar" class="btn btn-mine col-md m-2" role="button" onClick="">
+                <a class="btn btn-mine col-md m-2" role="button" onClick="">
                     <i class="icon-cab button-icon"></i>en coche </a>
             </div>
             </form>

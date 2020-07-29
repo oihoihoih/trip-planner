@@ -82,170 +82,60 @@ if(document.querySelector(".cloudTransition") ) {
 //
 //
 
+let arrayArrival = [];
+
+
 //Función para ir a los enlaces y mostrar/ocultar los diferentes Divs
-function gotoDiv(proximoEnlace, event) {
-    let visibleSection = document.getElementById(proximoEnlace); 
-    let activos = document.querySelector('.active'); 
+function gotoDiv(proximoEnlace, storageOption) {
+    let visibleSection = document.getElementById(proximoEnlace);
+    let activos = document.querySelector('.active');
+    let listElement = document.querySelector('.bread-items');
+    let listContainer = document.getElementById('questionBreadcrumb')
+    let index=0;
+ 
+    if(storageOption) {
+        arrayArrival.push(storageOption);
 
-    console.log(activos);
+        if (arrayArrival.length >= 1) {
+        listContainer.style.display = 'flex';
+        }
+    
 
-    captureBreadcrumbs(proximoEnlace, event);
+        for (let i=1; i<=arrayArrival.length; i++){
+            let listItem = document.getElementById('arrivalList'+i);
+            listItem.style.display = 'flex';
+            console.log(arrayArrival[0])
+            listItem.innerHTML = arrayArrival[i-1];
+        }
+    }
+
+    if(!storageOption){
+        if (listElement.id == 'arrivalList1') index = 1;
+        else if (listElement.id == 'arrivalList2') {
+            index = 2;
+            proximoEnlace = arrayArrival[1];
+        } else if (listElement.id == 'arrivalList3') {
+            index = 3;
+        }
+        else if (listElement.id == 'arrivalList4') index = 4;
+
+        if (index>0){
+        for(let j=arrayArrival.length;  j>index;  j--){
+            arrayArrival.pop();
+            let removeListItem = document.getElementById('arrivalList'+j);
+            removeListItem.style.display = 'none';
+        }
+        }
+}
+
+    visibleSection.classList.add('active');
 
     if (activos != null) {
         activos.classList.remove('active');
     }
-
-    visibleSection.classList.add('active');
-    writeBreadCrumbs();
 }
 
 
-
-//Para guardar los valores de los clicks
-let choosenTransport;
-let choosenTerminal;
-let choosenStation;
-let choosenBusStation;
-let choosenPortOption;
-let choosenmethod;
-
-let firstTransportBr = document.getElementById('firstTransport_br');
-let whichTerminalBr = document.getElementById('whichTerminal_br');
-let whichStationBr = document.getElementById('whichStation_br');
-let whichBusStationBr = document.getElementById('whichBusStation_br');
-let howPortBr = document.getElementById('howPort_br');
-let methodBr = document.getElementById('method_br');
-
-
-// GUARDAR INFO PARA BREADCRUMBS
-
-function captureBreadcrumbs(proximoEnlace, event){
-    let arrivalId = document.getElementById('arrival');
-    let breadcr = document.getElementById('questionBreadcrumb');
-
-    //fase 1. Con qué medio de transporte llegas a Bcn?
-    if(arrivalId.classList.contains('active')){
-        breadcr.style.display = 'flex';
-        firstTransportBr.style.display = 'flex';
-        switch(proximoEnlace){
-            case 'que-terminal':
-                choosenTransport = '<i class="icon-flight bread-icon"></i>';
-                localStorage.setItem('firstTransport', choosenTransport);
-                break;
-            case 'que-estacion':
-                choosenTransport = '<i class="icon-train bread-icon"></i>';
-                localStorage.setItem('firstTransport', choosenTransport);
-                break;
-            //Falta añadir opción coche
-            case 'que-estacion-bus':
-                choosenTransport = '<i class="icon-bus bread-icon"></i>';
-                localStorage.setItem('firstTransport',choosenTransport);
-                break;
-            case 'barco-coche':
-                choosenTransport = '<i class="icon-ship bread-icon"></i>';
-                localStorage.setItem('firstTransport', choosenTransport);
-                break;
-        }
-    }
-
-    // fase 2. Qué terminal -- avión
-    let queTerminal = document.getElementById('que-terminal');
-    if(queTerminal.classList.contains('active')){
-        whichTerminalBr.style.display = 'flex';
-        switch(event.id){
-            case 'T1':
-                choosenTerminal = 'T1';
-                localStorage.setItem('whichTerminal', choosenTerminal);
-                break;
-            case 'T2':
-                choosenTerminal = 'T2';
-                localStorage.setItem('whichTerminal', choosenTerminal);
-                break;
-        }   
-    }
-
-    // fase 2. Qué estación -- tren
-    let trainStation = document.getElementById('que-estacion');
-    if(trainStation.classList.contains('active')){
-        whichStationBr.style.display = 'flex';
-        switch(event.id){
-            case 'Sants':
-                choosenStation = 'Sants';
-                localStorage.setItem('whichStation', choosenStation);
-                break;
-            case 'Francia':
-                choosenStation = 'Francia';
-                localStorage.setItem('whichStation', choosenStation);
-                break;
-            case 'Catalunya':
-                choosenStation = 'Catalunya';
-                localStorage.setItem('whichStation', choosenStation);
-                break;
-            case 'Sagrera':
-                choosenStation = 'La Sagrera';
-                localStorage.setItem('whichStation', choosenStation);
-                break;                
-        }
-    }
-
-    // fase 2. Qué estación -- bus
-    let busStation = document.getElementById('que-estacion-bus');
-    if (busStation.classList.contains('active')){
-        whichBusStationBr.style.display = 'flex';
-        switch(event.id){
-            case 'SantsBus':
-                choosenBusStation = 'Sants';
-                localStorage.setItem('whichBusStation', choosenBusStation);
-                break;
-            case 'NorteBus':
-                choosenBusStation = 'Norte';
-                localStorage.setItem('whichBusStation', choosenBusStation);
-                break;
-        }
-    }
-
-    // fase 2. Con coche? -- barco
-    let port = document.getElementById('barco-coche');
-    if(port.classList.contains('active')){
-        howPortBr.style.display = 'flex';
-        switch(event.id){
-            case 'noCar':
-                choosenPortOption = 'sin coche';
-                localStorage.setItem('portOption', choosenPortOption);
-                break;
-        }
-    }
-
-    //fase 3. Cómo quieres ir?
-    let modoTransporte = document.getElementById('choosenTransport');
-    if(modoTransporte.classList.contains('active')){
-        methodBr.style.display = 'flex';
-        switch(event.id){
-            case 'fastChoice':
-                choosenMethod = 'rápido';
-                localStorage.setItem('arrivalMethod', choosenMethod);
-                break;
-            
-        }
-    }
-}
-
-// ESCRIBIR BREADCRUMBS
-
-function writeBreadCrumbs(){
-    let arrivalTransport = localStorage.getItem('firstTransport');
-    let whichTerminal = localStorage.getItem('whichTerminal');
-    let choosenStation = localStorage.getItem('whichStation');
-    let choosenBusStation = localStorage.getItem('whichBusStation');
-    let choosenPortOption = localStorage.getItem('portOption');
-
-        
-    firstTransportBr.innerHTML = arrivalTransport
-    whichTerminalBr.innerHTML = whichTerminal;
-    whichStationBr.innerHTML = choosenStation;
-    whichBusStationBr.innerHTML = choosenBusStation;
-    howPortBr.innerHTML = choosenPortOption;
-}
 
 //
 //
@@ -264,7 +154,7 @@ function introValidate() {
     let accomAddress = document.forms["introForm"]["accommodationAddress"];
 
     if (dayCounter.value == "") {
-        dayCounter.classList.add("is-invalid");     
+        dayCounter.classList.add("is-invalid");
         acumErrores ++;
     }
 
@@ -285,7 +175,7 @@ function introValidate() {
         //Opcional mostrar pantalla con "se han recogido bien los datos…"
         gotoDiv('arrival')
         return false;
-	}
+    }
 }
 
 // DATOS FORMULARIO DE ENTRADA (INTROFORM)
@@ -320,10 +210,10 @@ function contactValidate() {
 
         acumErrores ++;
     } else if(!validar_email(mail.value)){
-		mail.classList.add("is-invalid");
- 
+        mail.classList.add("is-invalid");
+
         acumErrores ++;
-	}
+    }
 
     if (subject.value == "") {
         subject.classList.add("is-invalid");
@@ -348,8 +238,8 @@ function contactValidate() {
     if (acumErrores > 0){
         return false;
     }else{
-		return true;
-	}
+        return true;
+    }
 }
 
 
@@ -358,7 +248,7 @@ if (document.getElementById("contactFormId")){
     form.addEventListener('blur', (event) => {
         console.log(event);
         //modo abreviado para poner condicional:
-	    // if(event.target.value!='') event.target.classList.remove('is-invalid');
+        // if(event.target.value!='') event.target.classList.remove('is-invalid');
 
     if(event.target.value!="" && event.target.classList.contains("is-invalid")) {
 
@@ -386,7 +276,6 @@ form.addEventListener('change', (event) => {
 function validar_email(mail) {
     var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-	return regex.test(mail) ? true : false;
+    return regex.test(mail) ? true : false;
 }
-
 
